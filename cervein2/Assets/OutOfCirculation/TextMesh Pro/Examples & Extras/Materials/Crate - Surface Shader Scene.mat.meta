@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e6b9b44320f4448d9d5e0ee634259966
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 2.0
+  assetPath: Assets/OutOfCirculation/TextMesh Pro/Examples & Extras/Materials/Crate
+    - Surface Shader Scene.mat
+  uploadId: 870544

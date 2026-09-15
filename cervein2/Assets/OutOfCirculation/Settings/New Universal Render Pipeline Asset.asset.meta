@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 32999d040bb414fc6a816ece020a01f5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 2.0
+  assetPath: Assets/OutOfCirculation/Settings/New Universal Render Pipeline Asset.asset
+  uploadId: 870544

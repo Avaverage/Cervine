@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f28c334d44214474d9702d3ad79ecb0a
+timeCreated: 1484171296
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 2.0
+  assetPath: Assets/OutOfCirculation/TextMesh Pro/Examples & Extras/Fonts/Roboto-Bold
+    - AFL.txt
+  uploadId: 870544
