@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: 21a509e1d3cd49978623fa564adb6f02
+labels:
+- Mesh
+- Text
+- Rendering
+- TextMesh
+- TextMeshPro
+- Font
+- Dynamic
+- Pro
+- Fonts
+- Advanced
+- GUI
+- Scene
+- Styles
+- Style
+- Layout
+- Atlas
+- Kerning
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 2.0
+  assetPath: Assets/OutOfCirculation/TextMesh Pro/Examples & Extras/Scenes/03 - Line
+    Justification.unity
+  uploadId: 870544

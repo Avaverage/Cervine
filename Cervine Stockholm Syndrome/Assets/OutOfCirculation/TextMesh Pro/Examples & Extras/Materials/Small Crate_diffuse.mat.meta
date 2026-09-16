@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 22262639920f43d6be32430e4e58350d
+timeCreated: 1473643741
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 2.0
+  assetPath: Assets/OutOfCirculation/TextMesh Pro/Examples & Extras/Materials/Small
+    Crate_diffuse.mat
+  uploadId: 870544

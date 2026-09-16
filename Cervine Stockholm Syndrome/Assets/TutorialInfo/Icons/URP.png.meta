@@ -132,3 +132,10 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 2.0
+  assetPath: Assets/TutorialInfo/Icons/URP.png
+  uploadId: 870544

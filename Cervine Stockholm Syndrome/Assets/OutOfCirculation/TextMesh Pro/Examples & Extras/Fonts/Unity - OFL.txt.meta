@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0251f66ebc602a944b35bccd13be2738
+timeCreated: 1484171296
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 2.0
+  assetPath: Assets/OutOfCirculation/TextMesh Pro/Examples & Extras/Fonts/Unity -
+    OFL.txt
+  uploadId: 870544
