@@ -17,8 +17,8 @@ TagManager:
   - NavMesh
   - BackgroundImage
   - DistantHotspot
-  - 
-  - 
+  - Player
+  - Hands
   - Character
   - CharacterOutline
   - 
