@@ -6,9 +6,8 @@ public class FeedingDeer : MonoBehaviour
     //integers
     public int DeerCrackerQuota;
     public int MaxDeerCrackerQuota;
+    public int pointScore;
     //floats
-    public float DeerTimer = 0f;
-    public float MaxDeerTimer;
     //Audio and what not
     public AudioClip ChompChompSFX;
     public AudioSource DeerAudioSource;
@@ -17,14 +16,13 @@ public class FeedingDeer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        DeerTimer = MaxDeerTimer;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        DeerTimer -= Time.deltaTime;
-        if (DeerTimer <= 0f)
+        if (GameTimer.MainTimer <= 0f)
         {
             deerPathFinding.IsDeerUpset = true;
         }
@@ -43,10 +41,13 @@ public class FeedingDeer : MonoBehaviour
                 //Increase The Maximum Amount of Deer Crackers Needed To satisfy the Deer's hunger
                 MaxDeerCrackerQuota++;
                 DeerCrackerQuota = 0;
-                DeerTimer = MaxDeerTimer;
+                GameTimer.MainMaxTimer *= (GameTimer.NewMaxTimer);
+                GameTimer.MainTimer = GameTimer.MainMaxTimer;
             }
             //destroy DeerCracker
             Destroy(Collision.gameObject);
+            //Add to point score. Can maybe display it somewhere in the UI
+            pointScore += 100;
         }
     }
 }
