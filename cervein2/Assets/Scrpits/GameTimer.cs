@@ -5,11 +5,15 @@ public class GameTimer : MonoBehaviour
 {
     public static float MainTimer;
     public static float MainMaxTimer;
+    public float MaxTimer;
     public static float NewMaxTimer;
+    public float ResetMaxTimer;
     public Image WristWatch;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //When the Instance starts, the Main Timer starts at its maximum
+        MainMaxTimer = MaxTimer;
         MainTimer = MainMaxTimer;
     }
 

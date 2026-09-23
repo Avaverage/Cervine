@@ -7,6 +7,7 @@ public class FeedingDeer : MonoBehaviour
     public int DeerCrackerQuota;
     public int MaxDeerCrackerQuota;
     public int pointScore;
+    public int pointScoreMarginalIncrease;
     //floats
     //Audio and what not
     public AudioClip ChompChompSFX;
@@ -27,6 +28,7 @@ public class FeedingDeer : MonoBehaviour
             deerPathFinding.IsDeerUpset = true;
         }
     }
+    //OnTriggerEnter is called every time the object the code is applied to makes valid collision with another object. Triggers allow for non-physical collisions
     void OnTriggerEnter(Collider Collision)
     {
         if(Collision.gameObject.CompareTag("DeerCracker"))
@@ -50,7 +52,8 @@ public class FeedingDeer : MonoBehaviour
             //destroy DeerCracker
             Destroy(Collision.gameObject);
             //Add to point score. Can maybe display it somewhere in the UI
-            pointScore += 100;
+            pointScore += pointScoreMarginalIncrease;
         }
     }
 }
+//Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom . . . etc . . .
