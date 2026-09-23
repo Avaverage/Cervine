@@ -34,7 +34,10 @@ public class FeedingDeer : MonoBehaviour
             //Increase the amount of deer Crackers you've fed to the deer
             DeerCrackerQuota++;
             //Play Some SFX (Maybe I'll add particle effects too, but I haven't dabbled in that art yet)
-            DeerAudioSource.PlayOneShot(ChompChompSFX);
+            if(ChompChompSFX != null)
+            {
+                DeerAudioSource.PlayOneShot(ChompChompSFX);
+            }
             //if You get enough Deer Crackers
             if (DeerCrackerQuota >= MaxDeerCrackerQuota)
             {
