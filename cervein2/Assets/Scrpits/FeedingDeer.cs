@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using TMPro;
 using UnityEngine;
 
 public class FeedingDeer : MonoBehaviour
@@ -14,10 +15,12 @@ public class FeedingDeer : MonoBehaviour
     public AudioSource DeerAudioSource;
     //OutsideScripts
     public DeerPathfinding deerPathFinding;
+    //UI
+    public TextMeshProUGUI scoreDisplay;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        scoreDisplay.text = $"Score: {pointScore}".ToString();
     }
 
     // Update is called once per frame
@@ -53,6 +56,7 @@ public class FeedingDeer : MonoBehaviour
             Destroy(Collision.gameObject);
             //Add to point score. Can maybe display it somewhere in the UI
             pointScore += pointScoreMarginalIncrease;
+            scoreDisplay.text = $"Score: {pointScore}".ToString();
         }
     }
 }

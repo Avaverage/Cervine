@@ -1,15 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
-    //integers
-    public int playerHealth;
-    public int playerMaxHealth;
     //floats
+    public float playerHealth;
+    public float playerMaxHealth;
     public float HealthTimer;
     public float MaxHealthTimer;
     //booleans
     public bool isDead = false;
+    //images and UI
+    public Image HealthBarImage;
+    public TextMeshProUGUI HealthDisplay;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
         playerHealth = playerMaxHealth;
         //Set the player's cooldown to the max
         HealthTimer = MaxHealthTimer;
+        UpdateTextDisplay();
     }
 
     // Update is called once per frame
@@ -24,6 +29,10 @@ public class PlayerHealth : MonoBehaviour
     {
         //decrease health timer indefinitely.
         HealthTimer -= Time.deltaTime;
+        if(isDead)
+        {
+
+        }
     }
     //OnTriggerStay is called once per frame when making collision with another object, and stops as soon as the objects are no longer colliding. Triggers allow for non-physical collisions
     private void OnTriggerStay(Collider Collision)
@@ -32,13 +41,22 @@ public class PlayerHealth : MonoBehaviour
         {
             //Take Damage (no shit)
             playerHealth--;
+            //update HealthBar accordingly
+            HealthBarImage.fillAmount = playerHealth / playerMaxHealth;
+            UpdateTextDisplay();
             //Die if your health is depleted (also no shit, Sherlock)
             if(playerHealth <= 0)
             {
                 isDead = true;
+                playerHealth = 0;
             }
             HealthTimer = MaxHealthTimer;
         }
     }
+    public void UpdateTextDisplay()
+    {
+        //update health display accordingly
+        HealthDisplay.text = $"{playerHealth}/{playerMaxHealth}".ToString();
+    }
 }
-//Fuck you Watson
+//Fuck you, Watson
