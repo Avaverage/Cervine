@@ -34,3 +34,4 @@ public class HandAnimatiion : MonoBehaviour
         animator.SetFloat(triggerActionName, triggerValue);
     }
 }
+//What the hell does all this mean? I didn't actually write this, and I didn't watch the video explaining it
