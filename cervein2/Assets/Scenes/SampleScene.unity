@@ -2460,6 +2460,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1954061504038431586, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954061504038431586, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129824986775927312, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.454
+      objectReference: {fileID: 0}
     - target: {fileID: 6420004929803959699, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_Name
       value: XR Origin (VR) (1)
