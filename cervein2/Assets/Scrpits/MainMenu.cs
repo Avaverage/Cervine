@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Animations;
 
 public class MainMenu : MonoBehaviour
 {
@@ -8,12 +9,18 @@ public class MainMenu : MonoBehaviour
     public string LevelToLoad;
     //booleans
     public bool PlayGameSelected = false;
+    public bool OptionsSelected = false;
     //floats
     public float PlayGameTimer = 0f;
     public float MaxPlayGameTimer;
     public float TestTimer;
+    public float OptionsTimer;
     //GameObjects and Components
     public CanvasGroup FadeOut;
+    //animation controllers
+    public Animator MMOptionsAC;
+    public Animator MMAC;
+    //animations
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,9 +31,13 @@ public class MainMenu : MonoBehaviour
     void Update()
     {
         TestTimer += Time.deltaTime;
-        if(TestTimer >= 3)
+        if(TestTimer == 3)
         {
-            MMQuit();
+            MMOptions();
+        }
+        if(TestTimer == 6)
+        {
+
         }
         if(PlayGameSelected)
         {
@@ -37,6 +48,17 @@ public class MainMenu : MonoBehaviour
                 SceneManager.LoadScene(LevelToLoad);
             }
         }
+        if(OptionsSelected)
+        {
+            OptionsTimer += Time.deltaTime;
+            MMOptionsAC.Play("MMOptionsMoveCenter");
+            MMAC.Play("MMMainMenuMoveLeft");
+            if(OptionsTimer >= 0.5f)
+            {
+                MMOptionsAC.Play("MMOptionsStayCenter");
+                MMAC.Play("MMMainMenuStayLeft");
+            }
+        }
     }
     public void MMPlayGame()
     {
@@ -44,10 +66,18 @@ public class MainMenu : MonoBehaviour
     }
     public void MMOptions()
     {
-
+        OptionsSelected = true;
     }
     public void MMQuit()
     {
         Application.Quit();
+    }
+    public void OptionsBack()
+    {
+
+    }
+    public void OptionsControls()
+    {
+
     }
 }
