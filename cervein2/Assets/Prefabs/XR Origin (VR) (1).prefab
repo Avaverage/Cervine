@@ -1628,6 +1628,7 @@ MonoBehaviour:
   MaxHealthTimer: 2
   isDead: 0
   HealthBarImage: {fileID: 0}
+  HealthDisplay: {fileID: 0}
 --- !u!136 &5673864912862160832
 CapsuleCollider:
   m_ObjectHideFlags: 0
