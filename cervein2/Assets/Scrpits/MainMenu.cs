@@ -24,8 +24,6 @@ public class MainMenu : MonoBehaviour
     //GameObjects and Components
     public CanvasGroup FadeOut;
     public CanvasGroup Controls;
-    public Slider MusicVolume;
-    public Slider SFXVolume;
     //animation controllers
     public Animator MMOptionsAC;
     public Animator MMAC;

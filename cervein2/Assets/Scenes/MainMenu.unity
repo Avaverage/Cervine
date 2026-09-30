@@ -3486,7 +3486,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 437959206}
   m_HandleRect: {fileID: 1987941466}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 1
@@ -4678,7 +4678,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.001
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5035,8 +5035,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioMixing
   MainMixer: {fileID: 24100000, guid: de382a0b4452ae34fbbb993b51fbafaf, type: 2}
-  volumeParameterName1: MusicVolume
-  volumeParameterName2: SFXVolume
+  MusicSlider: {fileID: 1808948938}
+  SFXSlider: {fileID: 1517798493}
 --- !u!4 &1989013755
 Transform:
   m_ObjectHideFlags: 0
@@ -5366,8 +5366,6 @@ MonoBehaviour:
   OptionsTimer: 0
   FadeOut: {fileID: 1606043092}
   Controls: {fileID: 112131149}
-  MusicVolume: {fileID: 0}
-  SFXVolume: {fileID: 0}
   MMOptionsAC: {fileID: 315807440}
   MMAC: {fileID: 899581024}
   OptionsControlsAC: {fileID: 112131150}
