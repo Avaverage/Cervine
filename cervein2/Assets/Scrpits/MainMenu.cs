@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
         TestTimer += Time.deltaTime;
         if(TestTimer == 3)
         {
-            MMOptions();
+
         }
         if(TestTimer == 6)
         {
@@ -48,16 +48,19 @@ public class MainMenu : MonoBehaviour
                 SceneManager.LoadScene(LevelToLoad);
             }
         }
+        //MMOptionsButton
         if(OptionsSelected)
         {
             OptionsTimer += Time.deltaTime;
             MMOptionsAC.Play("MMOptionsMoveCenter");
             MMAC.Play("MMMainMenuMoveLeft");
-            if(OptionsTimer >= 0.5f)
-            {
-                MMOptionsAC.Play("MMOptionsStayCenter");
-                MMAC.Play("MMMainMenuStayLeft");
-            }
+        }
+        if(OptionsTimer >= 0.5f && OptionsSelected)
+        {
+            MMOptionsAC.Play("MMOptionsStayCenter");
+            MMAC.Play("MMMainMenuStayLeft");
+            OptionsSelected = false;
+            OptionsTimer = 0;
         }
     }
     public void MMPlayGame()
