@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Animations;
 using UnityEngine.UI;
+using UnityEngine.Scripting;
+using UnityEditor;
 
 public class MainMenu : MonoBehaviour
 {
@@ -28,6 +30,8 @@ public class MainMenu : MonoBehaviour
     public Animator MMOptionsAC;
     public Animator MMAC;
     public Animator OptionsControlsAC;
+    //scripts
+    public StoredInformation StoredInformation;
     //animations
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -59,6 +63,7 @@ public class MainMenu : MonoBehaviour
             FadeOut.alpha = PlayGameTimer / MaxPlayGameTimer;
             if (PlayGameTimer >= MaxPlayGameTimer)
             {
+                StoredInformation.OnSave();
                 SceneManager.LoadScene(LevelToLoad);
             }
         }
@@ -128,6 +133,7 @@ public class MainMenu : MonoBehaviour
     }
     public void MMQuit()
     {
+        StoredInformation.OnSave();
         Application.Quit();
     }
     public void OptionsBack()

@@ -2789,6 +2789,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113209014}
   m_CullTransparentMesh: 1
+--- !u!1 &1122131407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1122131409}
+  - component: {fileID: 1122131408}
+  m_Layer: 0
+  m_Name: StoredInformation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1122131408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122131407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1e88e63f057ed4988b7b0bfb08a174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StoredInformation
+  MusicVolume: 0
+  SFXVolume: 0
+  HighScore: 0
+--- !u!4 &1122131409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122131407}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.79135, y: 5.42795, z: 35.93454}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1151917551
 GameObject:
   m_ObjectHideFlags: 0
@@ -5037,6 +5084,8 @@ MonoBehaviour:
   MainMixer: {fileID: 24100000, guid: de382a0b4452ae34fbbb993b51fbafaf, type: 2}
   MusicSlider: {fileID: 1808948938}
   SFXSlider: {fileID: 1517798493}
+  MVDBV: 0
+  SFXDBV: 0
 --- !u!4 &1989013755
 Transform:
   m_ObjectHideFlags: 0
@@ -5369,6 +5418,7 @@ MonoBehaviour:
   MMOptionsAC: {fileID: 315807440}
   MMAC: {fileID: 899581024}
   OptionsControlsAC: {fileID: 112131150}
+  StoredInformation: {fileID: 0}
 --- !u!4 &1157394282173009685
 Transform:
   m_ObjectHideFlags: 0
@@ -5573,3 +5623,4 @@ SceneRoots:
   - {fileID: 1724977710}
   - {fileID: 714485257}
   - {fileID: 1989013755}
+  - {fileID: 1122131409}
