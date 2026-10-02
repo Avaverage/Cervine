@@ -20,11 +20,13 @@ public class MainMenu : MonoBehaviour
     public bool OptionsControlsInactive = false;
     //floats
     public float PlayGameTimer = 0f;
+    public float FadeInTimer = 3;
     public float MaxPlayGameTimer;
     public float TestTimer;
     public float OptionsTimer;
     //GameObjects and Components
     public CanvasGroup FadeOut;
+    public CanvasGroup FadeIn;
     public CanvasGroup Controls;
     //animation controllers
     public Animator MMOptionsAC;
@@ -43,6 +45,8 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FadeInTimer -= Time.deltaTime;
+        FadeIn.alpha = FadeInTimer / 3;
         if(MMSelected)
         {
             OptionsSelected = false;
