@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/GrabbingInformation.unity
+    guid: 7b4128ebf3c41f24fa6b70f342dbcb90
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: b054678329df15942b3fcf64e79aa4d2
   - enabled: 1
