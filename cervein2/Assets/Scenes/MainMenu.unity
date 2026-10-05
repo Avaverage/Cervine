@@ -5248,18 +5248,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1736642668730246712, guid: b89239542ff541446bd49777033c688e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.601
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736642668730246712, guid: b89239542ff541446bd49777033c688e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.601
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736642668730246712, guid: b89239542ff541446bd49777033c688e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.601
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736642668730246712, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.944938
       objectReference: {fileID: 0}
@@ -5299,10 +5287,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2315948742995227460, guid: b89239542ff541446bd49777033c688e, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6de12f6344486184382d4780294d0b22, type: 2}
     - target: {fileID: 6420004929803959699, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_Name
       value: XR Origin (VR) (1)
