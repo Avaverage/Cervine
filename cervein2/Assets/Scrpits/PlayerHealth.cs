@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
     //images and UI
     public Image HealthBarImage;
     public TextMeshProUGUI HealthDisplay;
+    //scripts
+    public Death Death;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -45,10 +47,11 @@ public class PlayerHealth : MonoBehaviour
             HealthBarImage.fillAmount = playerHealth / playerMaxHealth;
             UpdateTextDisplay();
             //Die if your health is depleted (also no shit, Sherlock)
-            if(playerHealth <= 0)
+            if(playerHealth <= 0 && !isDead)
             {
                 isDead = true;
                 playerHealth = 0;
+                Death.OnDeath();
             }
             HealthTimer = MaxHealthTimer;
         }
@@ -56,7 +59,7 @@ public class PlayerHealth : MonoBehaviour
     public void UpdateTextDisplay()
     {
         //update health display accordingly
-        HealthDisplay.text = $"{playerHealth}/{playerMaxHealth}".ToString();
+        HealthDisplay.text = $"Health: {playerHealth}/{playerMaxHealth}".ToString();
     }
 }
 //Fuck you, Watson
