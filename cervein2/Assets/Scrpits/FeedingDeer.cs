@@ -30,6 +30,7 @@ public class FeedingDeer : MonoBehaviour
         {
             deerPathFinding.IsDeerUpset = true;
         }
+        scoreDisplay.text = $"Score: {pointScore}".ToString();
     }
     //OnTriggerEnter is called every time the object the code is applied to makes valid collision with another object. Triggers allow for non-physical collisions
     void OnTriggerEnter(Collider Collision)
@@ -43,6 +44,8 @@ public class FeedingDeer : MonoBehaviour
             {
                 DeerAudioSource.PlayOneShot(ChompChompSFX);
             }
+            pointScore += pointScoreMarginalIncrease;
+
             //if You get enough Deer Crackers
             if (DeerCrackerQuota >= MaxDeerCrackerQuota)
             {
@@ -51,13 +54,18 @@ public class FeedingDeer : MonoBehaviour
                 DeerCrackerQuota = 0;
                 GameTimer.MainMaxTimer *= (GameTimer.NewMaxTimer);
                 GameTimer.MainTimer = GameTimer.MainMaxTimer;
+                //Make the deer no longer upset
+                deerPathFinding.IsDeerUpset = true;
             }
             //destroy DeerCracker
             Destroy(Collision.gameObject);
             //Add to point score. Can maybe display it somewhere in the UI
-            pointScore += pointScoreMarginalIncrease;
-            scoreDisplay.text = $"Score: {pointScore}".ToString();
+
         }
+    }
+    public void TranslateInformation()
+    {
+        StoredInformation.EndgameScore = pointScore;
     }
 }
 //Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom Nom . . . etc . . .

@@ -13,7 +13,7 @@ public class StoredInformation : MonoBehaviour
     public static float MusicVolumeStatic;
     public static float SFXVolumeStatic;
     public static float HighScoreStatic;
-    public static float EndgameScore;
+    public static float EndgameScore = 100f;
     private string saveFilePath;
     string json;
     //UI stuff

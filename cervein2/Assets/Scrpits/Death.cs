@@ -12,6 +12,7 @@ public class Death : MonoBehaviour
     public string levelToLoad;
     public float TextFadeOutTimer;
     public float MaxTextFadeOutTimer;
+    public FeedingDeer feedingDeer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,5 +45,6 @@ public class Death : MonoBehaviour
         MainGameplayCanvasGroup.alpha = 0;
         DeathCanvasGroup.enabled = true;
         DeathCanvasGroup.alpha = 0;
+        feedingDeer.TranslateInformation();
     }
 }

@@ -128,6 +128,7 @@ public class MainMenu : MonoBehaviour
     }
     public void MMPlayGame()
     {
+        StoredInformation.OnSave();
         PlayGameSelected = true;
     }
     public void MMOptions()
