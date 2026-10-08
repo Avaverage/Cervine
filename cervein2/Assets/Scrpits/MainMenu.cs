@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
 {
     //strings
     public string LevelToLoad;
+    public string OtherLevelToLoad;
     //booleans
     public bool PlayGameSelected = false;
     public bool OptionsSelected = false;
@@ -18,6 +19,7 @@ public class MainMenu : MonoBehaviour
     public bool OptionsBackActive = false;
     public bool OptionsControlsActive = false;
     public bool OptionsControlsInactive = false;
+    public bool PlayTutorialSelected = false;
     //floats
     public float PlayGameTimer = 0f;
     public float FadeInTimer = 3;
@@ -61,14 +63,21 @@ public class MainMenu : MonoBehaviour
         {
 
         }
-        if(PlayGameSelected)
+        if(PlayGameSelected || PlayTutorialSelected)
         {
             PlayGameTimer += Time.deltaTime;
             FadeOut.alpha = PlayGameTimer / MaxPlayGameTimer;
             if (PlayGameTimer >= MaxPlayGameTimer)
             {
                 StoredInformation.OnSave();
-                SceneManager.LoadScene(LevelToLoad);
+                if(PlayGameSelected)
+                {
+                    SceneManager.LoadScene(LevelToLoad);
+                }
+                if(PlayTutorialSelected)
+                {
+                    SceneManager.LoadScene(OtherLevelToLoad);
+                }
             }
         }
         //MMOptionsButton
@@ -153,5 +162,9 @@ public class MainMenu : MonoBehaviour
     {
         OptionsControlsInactive = true;
     }
-
+    public void PlayTutorial()
+    {
+        StoredInformation.OnSave();
+        PlayTutorialSelected = true;
+    }
 }

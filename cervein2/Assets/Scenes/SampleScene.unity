@@ -810,6 +810,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 70d40726afc5ed84dbe8813d6b0ae4a2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 680173687}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 70d40726afc5ed84dbe8813d6b0ae4a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 680173690}
   m_SourcePrefab: {fileID: 100100000, guid: 70d40726afc5ed84dbe8813d6b0ae4a2, type: 3}
 --- !u!1 &680173686 stripped
 GameObject:
@@ -841,7 +844,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &680173688
 CapsuleCollider:
@@ -862,10 +865,151 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.95263654
+  m_Radius: 1.4
   m_Height: 0.1
   m_Direction: 1
   m_Center: {x: 0, y: 0.9315084, z: -0.018368132}
+--- !u!114 &680173690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680173686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
+  m_InteractionManager: {fileID: 0}
+  m_Colliders:
+  - {fileID: 680173688}
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_AutoFindParentInteractableInHierarchy: 0
+  m_ParentInteractableObject: {fileID: 0}
+  m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 2
+  m_PredictedVisualsTransform: {fileID: 0}
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 8
+  m_TightenPosition: 0.1
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 8
+  m_TightenRotation: 0.1
+  m_TrackScale: 1
+  m_SmoothScale: 0
+  m_SmoothScaleAmount: 8
+  m_TightenScale: 0.1
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_StartingSingleGrabTransformers: []
+  m_StartingMultipleGrabTransformers: []
+  m_AddDefaultGrabTransformers: 1
+  m_FarAttachMode: 0
+  m_LimitLinearVelocity: 0
+  m_LimitAngularVelocity: 0
+  m_MaxLinearVelocityDelta: 10
+  m_MaxAngularVelocityDelta: 20
+--- !u!114 &751268610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 82769278337609814, guid: b89239542ff541446bd49777033c688e, type: 3}
+  m_PrefabInstance: {fileID: 7083437252760737650}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6687879ae61e0944cac844a4486c022f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameTimer
 --- !u!1 &803196465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1769,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &942949729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 942949730}
+  m_Layer: 0
+  m_Name: DeerHome
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &942949730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942949729}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.31998, y: 0.80584, z: -1.17593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &951984275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,7 +1832,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6687879ae61e0944cac844a4486c022f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameTimer
+  MainTimer: 0
+  MainMaxTimer: 0
   MaxTimer: 120
+  NewMaxTimer: 0
   ResetMaxTimer: 0.9
   WristWatch: {fileID: 48376055}
 --- !u!65 &951984277
@@ -2297,6 +2475,7 @@ MonoBehaviour:
   DeerAudioSource: {fileID: 1413748792}
   deerPathFinding: {fileID: 1413748786}
   scoreDisplay: {fileID: 64943524}
+  gameTimer: {fileID: 751268610}
 --- !u!114 &1413748786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2312,6 +2491,8 @@ MonoBehaviour:
   IsDeerUpset: 0
   Player: {fileID: 7083437252760737655}
   DeerAttackRange: {fileID: 803196465}
+  homeTarget: {fileID: 942949730}
+  self: {fileID: 1413748791}
 --- !u!195 &1413748787
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3077,6 +3258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Instantanious interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 6509334569711872184, guid: 920f64d1df252f74d92e9c3638d0b453, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7711106059117018326, guid: 920f64d1df252f74d92e9c3638d0b453, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.561
@@ -3182,6 +3367,10 @@ PrefabInstance:
       propertyPath: HealthBarImage
       value: 
       objectReference: {fileID: 2074692028}
+    - target: {fileID: 4450807509639592502, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: deerPathfinding
+      value: 
+      objectReference: {fileID: 1413748786}
     - target: {fileID: 6420004929803959699, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_Name
       value: XR Origin (VR) (1)
@@ -3194,6 +3383,10 @@ PrefabInstance:
       propertyPath: FadeInTimer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6618455025938054293, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: feedingDeer
+      value: 
+      objectReference: {fileID: 1413748785}
     - target: {fileID: 6618455025938054293, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: MaxFadeInTimer
       value: 3
@@ -3311,3 +3504,4 @@ SceneRoots:
   - {fileID: 951984280}
   - {fileID: 146492528}
   - {fileID: 680173685}
+  - {fileID: 942949730}

@@ -17,6 +17,7 @@ public class FeedingDeer : MonoBehaviour
     public DeerPathfinding deerPathFinding;
     //UI
     public TextMeshProUGUI scoreDisplay;
+    public GameTimer gameTimer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,11 +27,25 @@ public class FeedingDeer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameTimer.MainTimer <= 0f)
+        if (gameTimer.MainTimer < 0f)
         {
             deerPathFinding.IsDeerUpset = true;
         }
+        if(gameTimer.MainTimer > 0f)
+        {
+            deerPathFinding.IsDeerUpset = false;
+        }
         scoreDisplay.text = $"Score: {pointScore}".ToString();
+        if (DeerCrackerQuota >= MaxDeerCrackerQuota)
+        {
+            gameTimer.MaxTimer -= 5f;
+            gameTimer.MainTimer = gameTimer.MaxTimer;
+            //Make the deer no longer upset
+            deerPathFinding.IsDeerUpset = false;
+            //Increase The Maximum Amount of Deer Crackers Needed To satisfy the Deer's hunger
+            MaxDeerCrackerQuota++;
+            DeerCrackerQuota = 0;
+        }
     }
     //OnTriggerEnter is called every time the object the code is applied to makes valid collision with another object. Triggers allow for non-physical collisions
     void OnTriggerEnter(Collider Collision)
@@ -46,21 +61,12 @@ public class FeedingDeer : MonoBehaviour
             }
             pointScore += pointScoreMarginalIncrease;
 
+
             //if You get enough Deer Crackers
-            if (DeerCrackerQuota >= MaxDeerCrackerQuota)
-            {
-                //Increase The Maximum Amount of Deer Crackers Needed To satisfy the Deer's hunger
-                MaxDeerCrackerQuota++;
-                DeerCrackerQuota = 0;
-                GameTimer.MainMaxTimer *= (GameTimer.NewMaxTimer);
-                GameTimer.MainTimer = GameTimer.MainMaxTimer;
-                //Make the deer no longer upset
-                deerPathFinding.IsDeerUpset = true;
-            }
+
             //destroy DeerCracker
             Destroy(Collision.gameObject);
             //Add to point score. Can maybe display it somewhere in the UI
-
         }
     }
     public void TranslateInformation()

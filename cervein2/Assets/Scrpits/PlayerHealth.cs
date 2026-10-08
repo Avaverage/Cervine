@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
     public TextMeshProUGUI HealthDisplay;
     //scripts
     public Death Death;
+    public DeerPathfinding deerPathfinding;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,19 +42,23 @@ public class PlayerHealth : MonoBehaviour
     {
         if(Collision.gameObject.CompareTag("Enemy") && HealthTimer <= 0)
         {
-            //Take Damage (no shit)
-            playerHealth--;
-            //update HealthBar accordingly
-            HealthBarImage.fillAmount = playerHealth / playerMaxHealth;
-            UpdateTextDisplay();
-            //Die if your health is depleted (also no shit, Sherlock)
-            if(playerHealth <= 0 && !isDead)
+            if(deerPathfinding.IsDeerUpset)
             {
-                isDead = true;
-                playerHealth = 0;
-                Death.OnDeath();
+                //Take Damage (no shit)
+                playerHealth--;
+                //update HealthBar accordingly
+                HealthBarImage.fillAmount = playerHealth / playerMaxHealth;
+                UpdateTextDisplay();
+                //Die if your health is depleted (also no shit, Sherlock)
+                if(playerHealth <= 0 && !isDead)
+                {
+                    isDead = true;
+                    playerHealth = 0;
+                    Death.OnDeath();
+                }
+                HealthTimer = MaxHealthTimer;
             }
-            HealthTimer = MaxHealthTimer;
+
         }
     }
     public void UpdateTextDisplay()

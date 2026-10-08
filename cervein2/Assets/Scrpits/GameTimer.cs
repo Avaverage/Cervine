@@ -3,10 +3,10 @@ using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour
 {
-    public static float MainTimer;
-    public static float MainMaxTimer;
+    public float MainTimer;
+    public float MainMaxTimer;
     public float MaxTimer;
-    public static float NewMaxTimer;
+    public float NewMaxTimer;
     public float ResetMaxTimer;
     public Image WristWatch;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,6 +23,10 @@ public class GameTimer : MonoBehaviour
         //Time depletes indefinitely
         MainTimer -= Time.deltaTime;
         //Adjusting WristWatch FillAmount to match the amount of time left.
-        WristWatch.fillAmount = MainTimer / MainMaxTimer;
+        WristWatch.fillAmount = MainTimer / MaxTimer;
+    }
+    public void ResetTimer()
+    {
+        MainTimer = MaxTimer;
     }
 }
