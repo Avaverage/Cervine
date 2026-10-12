@@ -1,12 +1,13 @@
 using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FeedingDeer : MonoBehaviour
 {
     //integers
-    public int DeerCrackerQuota;
-    public int MaxDeerCrackerQuota;
+    public float DeerCrackerQuota;
+    public float MaxDeerCrackerQuota;
     public int pointScore;
     public int pointScoreMarginalIncrease;
     //floats
@@ -18,6 +19,8 @@ public class FeedingDeer : MonoBehaviour
     //UI
     public TextMeshProUGUI scoreDisplay;
     public GameTimer gameTimer;
+    public TextMeshProUGUI QuotaDisplay;
+    public Image QuotaBar;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -46,6 +49,8 @@ public class FeedingDeer : MonoBehaviour
             MaxDeerCrackerQuota++;
             DeerCrackerQuota = 0;
         }
+        QuotaDisplay.text = ($"{DeerCrackerQuota}/{MaxDeerCrackerQuota}");
+        QuotaBar.fillAmount = DeerCrackerQuota / MaxDeerCrackerQuota;
     }
     //OnTriggerEnter is called every time the object the code is applied to makes valid collision with another object. Triggers allow for non-physical collisions
     void OnTriggerEnter(Collider Collision)

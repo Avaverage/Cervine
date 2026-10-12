@@ -559,7 +559,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6687879ae61e0944cac844a4486c022f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameTimer
+  MainTimer: 0
+  MainMaxTimer: 0
   MaxTimer: 120
+  NewMaxTimer: 0
   ResetMaxTimer: 0.9
   WristWatch: {fileID: 7004223989952177349}
 --- !u!1 &2511258739393369691
@@ -1033,7 +1036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RayInteractor: {fileID: 0}
-  m_NearFarInteractor: {fileID: 0}
+  m_NearFarInteractor: {fileID: 3608163767366567806}
   m_TeleportInteractor: {fileID: 2972114171007387238}
   m_TeleportMode: {fileID: -8061240218431744966, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_TeleportModeCancel: {fileID: 2307464322626738743, guid: c348712bda248c246b8c49b3db54643f, type: 3}
@@ -1750,6 +1753,7 @@ MonoBehaviour:
   HealthBarImage: {fileID: 0}
   HealthDisplay: {fileID: 0}
   Death: {fileID: 6618455025938054293}
+  deerPathfinding: {fileID: 0}
 --- !u!136 &5673864912862160832
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1883,11 +1887,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Death
   DeathCanvasGroup: {fileID: 0}
+  DeathCanvasGroupObject: {fileID: 0}
   DeathScreenFadeIn: 0
   MainGameplayCanvasGroup: {fileID: 0}
+  DeathText: {fileID: 0}
   FadeInTimer: 0
-  MaxFadeInTimer: 0
+  MaxFadeInTimer: 3
   levelToLoad: ScoreCounter
+  TextFadeOutTimer: 3
+  MaxTextFadeOutTimer: 0
+  feedingDeer: {fileID: 0}
 --- !u!1 &7056523320304200066
 GameObject:
   m_ObjectHideFlags: 0
@@ -3060,6 +3069,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b200f6587d118224eba8467281481800, type: 3}
+--- !u!114 &3608163767366567806 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4808866746549998793, guid: b200f6587d118224eba8467281481800, type: 3}
+  m_PrefabInstance: {fileID: 8119500877772673975}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a07ef133a37d140a87cdf1f1c75fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6650340260888531210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3234853630605623997, guid: b200f6587d118224eba8467281481800, type: 3}
