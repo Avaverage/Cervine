@@ -16,6 +16,7 @@ public class FeedingDeer : MonoBehaviour
     public AudioSource DeerAudioSource;
     //OutsideScripts
     public DeerPathfinding deerPathFinding;
+    public NavMeshLootSpawner navMeshLootSpawner;
     //UI
     public TextMeshProUGUI scoreDisplay;
     public GameTimer gameTimer;
@@ -25,6 +26,7 @@ public class FeedingDeer : MonoBehaviour
     void Start()
     {
         scoreDisplay.text = $"Score: {pointScore}".ToString();
+        StoredInformation.GameStart = false;
     }
 
     // Update is called once per frame
@@ -65,6 +67,7 @@ public class FeedingDeer : MonoBehaviour
                 DeerAudioSource.PlayOneShot(ChompChompSFX);
             }
             pointScore += pointScoreMarginalIncrease;
+            navMeshLootSpawner.deerCrackerTotalCount--;
 
 
             //if You get enough Deer Crackers

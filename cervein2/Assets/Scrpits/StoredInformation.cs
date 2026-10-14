@@ -29,6 +29,8 @@ public class StoredInformation : MonoBehaviour
     public AudioClip NoSave;
     public AudioClip YesSave;
     public string levelToLoad;
+    //GameStart
+    public static bool GameStart = false;
     void Awake()
     {
         saveFilePath = Path.Combine(Application.persistentDataPath, "savefile.json");

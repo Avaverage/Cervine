@@ -45,6 +45,7 @@ public class Death : MonoBehaviour
         MainGameplayCanvasGroup.alpha = 0;
         DeathCanvasGroup.enabled = true;
         DeathCanvasGroup.alpha = 0;
+        StoredInformation.GameStart = false;
         feedingDeer.TranslateInformation();
     }
 }
