@@ -1,18 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
     //floats
+    public float HBBG;
+    public float MinHBBG;
+    public float HBBGDecreaseMargine;
     public float playerHealth;
     public float playerMaxHealth;
     public float HealthTimer;
     public float MaxHealthTimer;
     //booleans
     public bool isDead = false;
+    public bool lostHealth = false;
     //images and UI
     public Image HealthBarImage;
+    public Image HealthBarBackgroundImage;
     public TextMeshProUGUI HealthDisplay;
     //scripts
     public Death Death;
@@ -25,6 +31,8 @@ public class PlayerHealth : MonoBehaviour
         //Set the player's cooldown to the max
         HealthTimer = MaxHealthTimer;
         UpdateTextDisplay();
+        MinHBBG = playerMaxHealth / playerMaxHealth;
+        HBBG = playerMaxHealth / playerMaxHealth;
     }
 
     // Update is called once per frame
@@ -35,6 +43,11 @@ public class PlayerHealth : MonoBehaviour
         if(isDead)
         {
 
+        }
+        HealthBarBackgroundImage.fillAmount = HBBG;
+        if(lostHealth)
+        {
+            StartCoroutine(DecreaseValueCoroutine());
         }
     }
     //OnTriggerStay is called once per frame when making collision with another object, and stops as soon as the objects are no longer colliding. Triggers allow for non-physical collisions
@@ -49,6 +62,8 @@ public class PlayerHealth : MonoBehaviour
                 //update HealthBar accordingly
                 HealthBarImage.fillAmount = playerHealth / playerMaxHealth;
                 UpdateTextDisplay();
+                MinHBBG = playerHealth / playerMaxHealth;
+                lostHealth = true;
                 //Die if your health is depleted (also no shit, Sherlock)
                 if(playerHealth <= 0 && !isDead)
                 {
@@ -59,6 +74,19 @@ public class PlayerHealth : MonoBehaviour
                 HealthTimer = MaxHealthTimer;
             }
 
+        }
+    }
+    public IEnumerator DecreaseValueCoroutine()
+    {
+        while(HBBG > MinHBBG)
+        {
+            HBBG -= HBBGDecreaseMargine;
+            if(HBBG < MinHBBG)
+            {
+                HBBG = MinHBBG;
+                lostHealth = false;
+            }
+            yield return null;
         }
     }
     public void UpdateTextDisplay()
