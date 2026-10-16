@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using JetBrains.Annotations;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -13,13 +14,20 @@ public class PlayerHealth : MonoBehaviour
     public float playerMaxHealth;
     public float HealthTimer;
     public float MaxHealthTimer;
+    public float ShakeTimer;
+    public float IconTimer;
     //booleans
     public bool isDead = false;
     public bool lostHealth = false;
+    public bool IsHit = false;
+    public bool PlayShake = false;
     //images and UI
     public Image HealthBarImage;
     public Image HealthBarBackgroundImage;
     public TextMeshProUGUI HealthDisplay;
+    //Animators
+    public Animator HealthBarCanvasGroup;
+    public Animator IconAnimator;
     //scripts
     public Death Death;
     public DeerPathfinding deerPathfinding;
@@ -33,6 +41,8 @@ public class PlayerHealth : MonoBehaviour
         UpdateTextDisplay();
         MinHBBG = playerMaxHealth / playerMaxHealth;
         HBBG = playerMaxHealth / playerMaxHealth;
+        HealthBarCanvasGroup.Play("HealthBarFreeze");
+        IconAnimator.Play("Non-Existent");
     }
 
     // Update is called once per frame
@@ -49,6 +59,28 @@ public class PlayerHealth : MonoBehaviour
         {
             StartCoroutine(DecreaseValueCoroutine());
         }
+        if(IsHit)
+        {
+            if(PlayShake)
+            {
+                ShakeTimer += Time.deltaTime;
+                HealthBarCanvasGroup.Play("DamageShakeBar");
+            }
+            if(ShakeTimer >= 0.1666666f)
+            {
+                HealthBarCanvasGroup.Play("HealthBarFreeze");
+                ShakeTimer = 0;
+                PlayShake = false;
+            }
+            IconTimer += Time.deltaTime;
+            IconAnimator.Play("TakeOneDamage");
+            if (IconTimer >= 1f)
+            {
+                IconAnimator.Play("Non-Existent");
+                IconTimer = 0;
+                IsHit = false;
+            }
+        }
     }
     //OnTriggerStay is called once per frame when making collision with another object, and stops as soon as the objects are no longer colliding. Triggers allow for non-physical collisions
     private void OnTriggerStay(Collider Collision)
@@ -64,6 +96,8 @@ public class PlayerHealth : MonoBehaviour
                 UpdateTextDisplay();
                 MinHBBG = playerHealth / playerMaxHealth;
                 lostHealth = true;
+                IsHit = true;
+                PlayShake = true;
                 //Die if your health is depleted (also no shit, Sherlock)
                 if(playerHealth <= 0 && !isDead)
                 {

@@ -278,6 +278,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c57e57f42710084da1413a432278b17, type: 3}
+--- !u!95 &164280062 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5515891332169454987, guid: 4982d81678d337645bec08afaff04f2e, type: 3}
+  m_PrefabInstance: {fileID: 8666451467047232321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &203454736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -619,6 +624,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4450807509639592502, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: IconAnimator
+      value: 
+      objectReference: {fileID: 164280062}
+    - target: {fileID: 4450807509639592502, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: HealthDisplay
       value: 
       objectReference: {fileID: 4068443476049474895}
@@ -630,6 +639,10 @@ PrefabInstance:
       propertyPath: deerPathfinding
       value: 
       objectReference: {fileID: 1651333973}
+    - target: {fileID: 4450807509639592502, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: HealthBarCanvasGroup
+      value: 
+      objectReference: {fileID: 8666451467047232323}
     - target: {fileID: 4450807509639592502, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: HealthBarBackgroundImage
       value: 
@@ -1381,6 +1394,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4982d81678d337645bec08afaff04f2e, type: 3}
+--- !u!95 &8666451467047232323 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1274659630038284343, guid: 4982d81678d337645bec08afaff04f2e, type: 3}
+  m_PrefabInstance: {fileID: 8666451467047232321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
