@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 6546515160926277501}
   - component: {fileID: 8712997743668775358}
   - component: {fileID: -1407683641198988866}
+  - component: {fileID: -2250688852611132788}
   m_Layer: 0
   m_Name: one cracker
   m_TagString: DeerCracker
@@ -585,3 +586,17 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0.37}
   m_TimeToStationary: 0.5
+--- !u!114 &-2250688852611132788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837689729522000270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a0b47eb774ebd44583b5ae2cd5f4636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeColorOnTouch
+  RangeCollider: {fileID: 6449226162385958440}
+  HoldCollider: {fileID: 6311395643852490142}
