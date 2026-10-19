@@ -196,11 +196,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c57e57f42710084da1413a432278b17, type: 3}
---- !u!1 &159186901 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6019526658665561013, guid: 346b73541addad6448884553c3f78f15, type: 3}
-  m_PrefabInstance: {fileID: 1651333969}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &162296323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1062,10 +1057,6 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1671459210}
-    - target: {fileID: 4735893783968209975, guid: 346b73541addad6448884553c3f78f15, type: 3}
-      propertyPath: m_WalkableMask
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4833567740927518581, guid: 346b73541addad6448884553c3f78f15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 488.9695
@@ -1125,17 +1116,14 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6019526658665561013, guid: 346b73541addad6448884553c3f78f15, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1651333979}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 346b73541addad6448884553c3f78f15, type: 3}
 --- !u!114 &1651333972 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7051360550581475687, guid: 346b73541addad6448884553c3f78f15, type: 3}
   m_PrefabInstance: {fileID: 1651333969}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159186901}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccdb1dc7f884b9c45a28c42de845c786, type: 3}
@@ -1146,44 +1134,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1194894808730820391, guid: 346b73541addad6448884553c3f78f15, type: 3}
   m_PrefabInstance: {fileID: 1651333969}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159186901}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 911fcac2219119e44962c326b4e6f9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeerPathfinding
---- !u!114 &1651333979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159186901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 1611694071
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.083333336
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d2ae7a885a09d1340a03cd320ee71e17, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!4 &1671459210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1736642668730246712, guid: b89239542ff541446bd49777033c688e, type: 3}
