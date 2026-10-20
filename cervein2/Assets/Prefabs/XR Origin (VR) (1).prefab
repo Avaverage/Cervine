@@ -1136,7 +1136,7 @@ GameObject:
   - component: {fileID: 6305755619585837114}
   m_Layer: 12
   m_Name: ' Right hand controller'
-  m_TagString: Untagged
+  m_TagString: Hands
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1890,11 +1890,17 @@ MonoBehaviour:
   playerMaxHealth: 5
   HealthTimer: 0
   MaxHealthTimer: 2
+  ShakeTimer: 0
+  IconTimer: 0
   isDead: 0
   lostHealth: 0
+  IsHit: 0
+  PlayShake: 0
   HealthBarImage: {fileID: 0}
   HealthBarBackgroundImage: {fileID: 0}
   HealthDisplay: {fileID: 0}
+  HealthBarCanvasGroup: {fileID: 0}
+  IconAnimator: {fileID: 0}
   Death: {fileID: 6618455025938054293}
   deerPathfinding: {fileID: 0}
 --- !u!136 &5673864912862160832
@@ -2310,7 +2316,7 @@ GameObject:
   - component: {fileID: 1954061504038431586}
   m_Layer: 12
   m_Name: Left hand controller
-  m_TagString: Untagged
+  m_TagString: Hands
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
