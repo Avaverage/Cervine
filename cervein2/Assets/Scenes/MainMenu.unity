@@ -2198,11 +2198,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2350269330971241766, guid: 4553a998cb300a84eb49ac11e1313ac8, type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2350269330971241766, guid: 4553a998cb300a84eb49ac11e1313ac8, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5416008893376638914, guid: 4553a998cb300a84eb49ac11e1313ac8, type: 3}
       propertyPath: m_Name
