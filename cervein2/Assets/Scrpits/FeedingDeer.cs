@@ -10,13 +10,15 @@ public class FeedingDeer : MonoBehaviour
     public float MaxDeerCrackerQuota;
     public int pointScore;
     public int pointScoreMarginalIncrease;
-    //floats
+    //booleans
+    public bool IsStartMenuDeer;
     //Audio and what not
     public AudioClip ChompChompSFX;
     public AudioSource DeerAudioSource;
     //OutsideScripts
     public DeerPathfinding deerPathFinding;
     public NavMeshLootSpawner navMeshLootSpawner;
+    public MainMenu mainMenuScript;
     //UI
     public TextMeshProUGUI scoreDisplay;
     public GameTimer gameTimer;
@@ -59,17 +61,23 @@ public class FeedingDeer : MonoBehaviour
     {
         if(Collision.gameObject.CompareTag("DeerCracker"))
         {
-            //Increase the amount of deer Crackers you've fed to the deer
-            DeerCrackerQuota++;
+            if(IsStartMenuDeer)
+            {
+                mainMenuScript.MMPlayGame();
+            }
+            else
+            {
+                //Increase the amount of deer Crackers you've fed to the deer
+                DeerCrackerQuota++;
+
+                pointScore += pointScoreMarginalIncrease;
+                navMeshLootSpawner.deerCrackerTotalCount--;
+            }
             //Play Some SFX (Maybe I'll add particle effects too, but I haven't dabbled in that art yet)
             if(ChompChompSFX != null)
             {
                 DeerAudioSource.PlayOneShot(ChompChompSFX);
             }
-            pointScore += pointScoreMarginalIncrease;
-            navMeshLootSpawner.deerCrackerTotalCount--;
-
-
             //if You get enough Deer Crackers
 
             //destroy DeerCracker
