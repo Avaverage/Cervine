@@ -348,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
   m_InteractionManager: {fileID: 0}
   m_Colliders:
-  - {fileID: 0}
+  - {fileID: 3274207462282465319}
   m_InteractionLayers:
     m_Bits: 1
   m_DistanceCalculationMode: 1
