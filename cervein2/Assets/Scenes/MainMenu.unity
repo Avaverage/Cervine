@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: homeTarget
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1738073226687127357, guid: 346b73541addad6448884553c3f78f15, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4335588024779590906, guid: 346b73541addad6448884553c3f78f15, type: 3}
       propertyPath: m_NavMeshData
       value: 

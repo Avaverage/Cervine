@@ -1844,7 +1844,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1907,10 +1907,12 @@ MonoBehaviour:
   MaxDeerCrackerQuota: 3
   pointScore: 0
   pointScoreMarginalIncrease: 100
+  IsStartMenuDeer: 0
   ChompChompSFX: {fileID: 0}
   DeerAudioSource: {fileID: 1747974919822789413}
   deerPathFinding: {fileID: 1194894808730820391}
   navMeshLootSpawner: {fileID: 0}
+  mainMenuScript: {fileID: 0}
   scoreDisplay: {fileID: 0}
   gameTimer: {fileID: 0}
   QuotaDisplay: {fileID: 5909298522183685456}
