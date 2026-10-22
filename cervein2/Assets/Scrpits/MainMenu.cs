@@ -48,7 +48,10 @@ public class MainMenu : MonoBehaviour
     void Update()
     {
         FadeInTimer -= Time.deltaTime;
-        FadeIn.alpha = FadeInTimer / 3;
+        if(FadeIn != null)
+        {
+            FadeIn.alpha = FadeInTimer / 3;
+        }
         if(MMSelected)
         {
             OptionsSelected = false;
@@ -56,20 +59,21 @@ public class MainMenu : MonoBehaviour
         TestTimer += Time.deltaTime;
         if(TestTimer >= 3 && TestTimerActive)
         {
-
             TestTimerActive = false;
-        }
-        if(TestTimer == 6)
-        {
-
         }
         if(PlayGameSelected || PlayTutorialSelected)
         {
             PlayGameTimer += Time.deltaTime;
-            FadeOut.alpha = PlayGameTimer / MaxPlayGameTimer;
+            if(FadeOut != null)
+            {
+                FadeOut.alpha = PlayGameTimer / MaxPlayGameTimer;
+            }
             if (PlayGameTimer >= MaxPlayGameTimer)
             {
-                StoredInformation.OnSave();
+                if(StoredInformation != null)
+                {
+                    StoredInformation.OnSave();
+                }
                 if(PlayGameSelected)
                 {
                     SceneManager.LoadScene(LevelToLoad);
@@ -84,12 +88,24 @@ public class MainMenu : MonoBehaviour
         if(OptionsSelected)
         {
             OptionsTimer += Time.deltaTime;
-            MMOptionsAC.Play("MMOptionsMoveCenter");
-            MMAC.Play("MMMainMenuMoveLeft");
+            if(MMOptionsAC != null)
+            {
+                MMOptionsAC.Play("MMOptionsMoveCenter");
+            }
+            if(MMAC != null)
+            {
+                MMAC.Play("MMMainMenuMoveLeft");
+            }
             if(OptionsTimer >= 0.5f && OptionsSelected)
             {
-                MMOptionsAC.Play("MMOptionsStayCenter");
-                MMAC.Play("MMMainMenuStayLeft");
+                if(MMOptionsAC != null)
+                {
+                    MMOptionsAC.Play("MMOptionsStayCenter");
+                }
+                if(MMAC != null)
+                {
+                    MMAC.Play("MMMainMenuStayLeft");
+                }
                 OptionsSelected = false;
                 OptionsTimer = 0;
             }
@@ -98,12 +114,24 @@ public class MainMenu : MonoBehaviour
         if(OptionsBackActive)
         {
             OptionsTimer += Time.deltaTime;
-            MMOptionsAC.Play("MMOptionsMoveLeft");
-            MMAC.Play("MMMainMenuMoveCenter");
+            if (MMOptionsAC != null)
+            {
+                MMOptionsAC.Play("MMOptionsMoveLeft");
+            }
+            if(MMAC != null)
+            {
+                MMAC.Play("MMMainMenuMoveCenter");
+            }
             if (OptionsTimer >= 0.5f && OptionsBackActive)
             {
-                MMOptionsAC.Play("MMOptionsStayLeft");
-                MMAC.Play("MMMainMenuActive");
+                if(MMOptionsAC != null)
+                {
+                    MMOptionsAC.Play("MMOptionsStayLeft");
+                }
+                if(MMAC != null)
+                {
+                    MMAC.Play("MMMainMenuActive");
+                }
                 OptionsBackActive = false;
                 OptionsTimer = 0;
             }
@@ -112,11 +140,20 @@ public class MainMenu : MonoBehaviour
         if (OptionsControlsActive)
         {
             OptionsTimer += Time.deltaTime;
-            Controls.enabled = true;
-            OptionsControlsAC.Play("ControlsMovingOpen");
+            if(Controls != null)
+            {
+                Controls.enabled = true;
+            }
+            if(OptionsControlsAC != null)
+            {
+                OptionsControlsAC.Play("ControlsMovingOpen");
+            }
             if (OptionsControlsActive && OptionsTimer >= 0.5f)
             {
-                OptionsControlsAC.Play("ControlsOpen");
+                if(OptionsControlsAC != null)
+                {
+                    OptionsControlsAC.Play("ControlsOpen");
+                } 
                 OptionsControlsActive = false;
                 OptionsTimer = 0;
             }
@@ -125,11 +162,20 @@ public class MainMenu : MonoBehaviour
         if(OptionsControlsInactive)
         {
             OptionsTimer += Time.deltaTime;
-            OptionsControlsAC.Play("ControlsMovingClose");
+            if (OptionsControlsAC != null)
+            {
+                OptionsControlsAC.Play("ControlsMovingClose");
+            }
             if(OptionsControlsInactive & OptionsTimer >= 0.05f)
             {
-                OptionsControlsAC.Play("ControlsClose");
-                Controls.enabled = false;
+                if (OptionsControlsAC != null)
+                {
+                    OptionsControlsAC.Play("ControlsClose");
+                }
+                if(Controls != null)
+                {
+                    Controls.enabled = false;
+                }
                 OptionsControlsInactive = false;
                 OptionsTimer = 0;
             }
@@ -137,7 +183,10 @@ public class MainMenu : MonoBehaviour
     }
     public void MMPlayGame()
     {
-        StoredInformation.OnSave();
+        if(StoredInformation != null)
+        {
+            StoredInformation.OnSave();
+        }
         PlayGameSelected = true;
     }
     public void MMOptions()
@@ -147,7 +196,10 @@ public class MainMenu : MonoBehaviour
     }
     public void MMQuit()
     {
-        StoredInformation.OnSave();
+        if(StoredInformation != null)
+        {
+            StoredInformation.OnSave();
+        }
         Application.Quit();
     }
     public void OptionsBack()
@@ -164,7 +216,10 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayTutorial()
     {
-        StoredInformation.OnSave();
+        if(StoredInformation != null)
+        {
+            StoredInformation.OnSave();
+        }
         PlayTutorialSelected = true;
     }
 }

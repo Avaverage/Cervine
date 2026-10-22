@@ -27,34 +27,55 @@ public class FeedingDeer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        scoreDisplay.text = $"Score: {pointScore}".ToString();
+        if(scoreDisplay != null)
+        {
+            scoreDisplay.text = $"Score: {pointScore}".ToString();
+        }
         StoredInformation.GameStart = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameTimer.MainTimer < 0f)
+        if(deerPathFinding != null)
         {
-            deerPathFinding.IsDeerUpset = true;
+            if (gameTimer.MainTimer < 0f)
+            {
+                deerPathFinding.IsDeerUpset = true;
+            }
+            if(gameTimer.MainTimer > 0f)
+            {
+                deerPathFinding.IsDeerUpset = false;
+            }
         }
-        if(gameTimer.MainTimer > 0f)
+        if(scoreDisplay != null)
         {
-            deerPathFinding.IsDeerUpset = false;
+            scoreDisplay.text = $"Score: {pointScore}".ToString();
         }
-        scoreDisplay.text = $"Score: {pointScore}".ToString();
         if (DeerCrackerQuota >= MaxDeerCrackerQuota)
         {
-            gameTimer.MaxTimer -= 5f;
-            gameTimer.MainTimer = gameTimer.MaxTimer;
+            if(gameTimer != null)
+            {
+                gameTimer.MaxTimer -= 5f;
+                gameTimer.MainTimer = gameTimer.MaxTimer;
+            }
             //Make the deer no longer upset
-            deerPathFinding.IsDeerUpset = false;
+            if(deerPathFinding != null)
+            {
+                deerPathFinding.IsDeerUpset = false;
+            }
             //Increase The Maximum Amount of Deer Crackers Needed To satisfy the Deer's hunger
             MaxDeerCrackerQuota++;
             DeerCrackerQuota = 0;
         }
-        QuotaDisplay.text = ($"{DeerCrackerQuota}/{MaxDeerCrackerQuota}");
+        if(QuotaDisplay != null)
+        {
+            QuotaDisplay.text = ($"{DeerCrackerQuota}/{MaxDeerCrackerQuota}");
+        }
+        if(QuotaBar != null)
+        {
         QuotaBar.fillAmount = DeerCrackerQuota / MaxDeerCrackerQuota;
+        }
     }
     //OnTriggerEnter is called every time the object the code is applied to makes valid collision with another object. Triggers allow for non-physical collisions
     void OnTriggerEnter(Collider Collision)
@@ -63,7 +84,10 @@ public class FeedingDeer : MonoBehaviour
         {
             if(IsStartMenuDeer)
             {
-                mainMenuScript.MMPlayGame();
+                if(mainMenuScript != null)
+                {
+                    mainMenuScript.MMPlayGame();
+                }
             }
             else
             {
@@ -71,15 +95,20 @@ public class FeedingDeer : MonoBehaviour
                 DeerCrackerQuota++;
 
                 pointScore += pointScoreMarginalIncrease;
-                navMeshLootSpawner.deerCrackerTotalCount--;
+                if(navMeshLootSpawner != null)
+                {
+                    navMeshLootSpawner.deerCrackerTotalCount--;
+                }
             }
             //Play Some SFX (Maybe I'll add particle effects too, but I haven't dabbled in that art yet)
             if(ChompChompSFX != null)
             {
-                DeerAudioSource.PlayOneShot(ChompChompSFX);
-            }
-            //if You get enough Deer Crackers
+                if(DeerAudioSource != null && ChompChompSFX != null)
+                {
+                    DeerAudioSource.PlayOneShot(ChompChompSFX);
+                }
 
+            }
             //destroy DeerCracker
             Destroy(Collision.gameObject);
             //Add to point score. Can maybe display it somewhere in the UI

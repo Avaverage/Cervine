@@ -35,11 +35,16 @@ public class NavMeshLootSpawner : MonoBehaviour
             //Find where one individual item will spawn
             Vector3 randomPoint = FindValidNavMeshSpawnPoint(transform.position, spawnRadius);
             //Choose any 1 of the prefabs added to the list
-            GameObject itemToSpawn = deerCrackers[Random.Range(0, deerCrackers.Length)];
-            //Spawn it in that place, facing the direction it did in its prefab form;
-            Instantiate(itemToSpawn, randomPoint + spawningOffset, Quaternion.identity);
-            //Add to the total number of deer crackers in the level
-            deerCrackerTotalCount++;
+            if(deerCrackers != null)
+            {
+                GameObject itemToSpawn = deerCrackers[Random.Range(0, deerCrackers.Length)];
+                //Spawn it in that place, facing the direction it did in its prefab form;
+                Instantiate(itemToSpawn, randomPoint + spawningOffset, Quaternion.identity);
+                //Add to the total number of deer crackers in the level
+                deerCrackerTotalCount++;
+            }
+
+
         }
     }
     //finding valid spawn point

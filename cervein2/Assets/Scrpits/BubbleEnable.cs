@@ -10,13 +10,10 @@ public class BubbleEnable : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        BubbleMesh.enabled = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(BubbleMesh != null)
+        {
+            BubbleMesh.enabled = false;
+        }
     }
     public void OnTriggerStay(Collider collision)
     {
@@ -24,11 +21,17 @@ public class BubbleEnable : MonoBehaviour
         {
             if (IsBubble)
             {
-                BubbleMesh.enabled = true;
+                if(BubbleMesh != null)
+                {
+                    BubbleMesh.enabled = true;
+                }
             }
             if(IsCracker)
             {
-                Bubble.SetActive(false);
+                if(Bubble != null)
+                {
+                    Bubble.SetActive(false);
+                }
             }
         }
     }
@@ -38,11 +41,17 @@ public class BubbleEnable : MonoBehaviour
         {
             if(IsBubble)
             {
-                BubbleMesh.enabled = false;
+                if(BubbleMesh != null)
+                {
+                    BubbleMesh.enabled = false;
+                }
             }
             if(IsCracker)
             {
-                Bubble.SetActive(true);
+                if(Bubble != null)
+                {
+                    Bubble.SetActive(true);
+                }
             }
         }
     }

@@ -51,7 +51,10 @@ public class AudioMixing : MonoBehaviour
         if(MusicSlider != null)
         {
             MVDBV = Mathf.Log10(MusicSliderValue) * 20;
-            MainMixer.SetFloat(volumeParameterName1, MVDBV);
+            if(MainMixer != null)
+            {
+                MainMixer.SetFloat(volumeParameterName1, MVDBV);
+            }
             StoredInformation.MusicVolumeStatic = MVDBV;
         }
     }
@@ -61,7 +64,10 @@ public class AudioMixing : MonoBehaviour
         if(MusicSlider != null)
         {
             SFXDBV = Mathf.Log10(SFXSliderValue) * 20;
-            MainMixer.SetFloat(volumeParameterName1, SFXDBV);
+            if(MainMixer != null)
+            {
+                MainMixer.SetFloat(volumeParameterName1, SFXDBV);
+            }
             StoredInformation.SFXVolumeStatic = SFXDBV;
         }
     }

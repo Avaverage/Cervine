@@ -10,7 +10,10 @@ public class HandAnimatiion : MonoBehaviour
     private string triggerActionName = "Pinch";
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        if(animator != null)
+        {
+            animator = GetComponent<Animator>();
+        }
         if (animator == null)
         {
             Debug.LogError("Animator component not found on the GameObject.");
@@ -26,12 +29,17 @@ public class HandAnimatiion : MonoBehaviour
         {
             return; // Exit if animator is not set
         }
-
-        float gripValue =gripActionRefrerence.action.ReadValue<float>();
-        float triggerValue = triggerActionRefrerence.action.ReadValue<float>();
-        // Clamp values to ensure they are between 0 and 1
-        animator.SetFloat(gripActionName, gripValue);
-        animator.SetFloat(triggerActionName, triggerValue);
+        if(gripActionRefrerence != null && triggerActionRefrerence != null)
+        {
+            float gripValue =gripActionRefrerence.action.ReadValue<float>();
+            float triggerValue = triggerActionRefrerence.action.ReadValue<float>();
+            // Clamp values to ensure they are between 0 and 1
+            if(animator != null)
+            {
+                animator.SetFloat(gripActionName, gripValue);
+                animator.SetFloat(triggerActionName, triggerValue);
+            }
+        }
     }
 }
 //What the hell does all this mean? I didn't actually write this, and I didn't watch the video explaining it

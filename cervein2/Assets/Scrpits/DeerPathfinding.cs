@@ -17,8 +17,14 @@ public class DeerPathfinding : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        DeerAgent = GetComponent<NavMeshAgent>();
-        homeTarget.position = self.position;
+        if(DeerAgent != null)
+        {
+            DeerAgent = GetComponent<NavMeshAgent>();
+        }
+        if(homeTarget != null)
+        {
+            homeTarget.position = self.position;
+        }
     }
     // Update is called once per frame
     void Update()
@@ -27,18 +33,24 @@ public class DeerPathfinding : MonoBehaviour
         if (IsDeerUpset)
         {
             //If you can find the player
-            if (Player != null)
+            if (Player != null && DeerAgent != null)
             {
                 //Target the player and move around through the baked area to find the player
                 DeerAgent.SetDestination(Player.position);
             }
             //Turn on weapons mode
-            DeerAttackRange.SetActive(true);
+            if(DeerAttackRange != null)
+            {
+                DeerAttackRange.SetActive(true);
+            }
         }
         else
         {
-            DeerAttackRange.SetActive(false);
-            if (homeTarget != null)
+            if(DeerAttackRange != null)
+            {
+                DeerAttackRange.SetActive(false);
+            }
+            if (homeTarget != null && DeerAgent != null)
             {
                 DeerAgent.SetDestination(homeTarget.position);
             }

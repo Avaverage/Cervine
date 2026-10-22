@@ -83,12 +83,18 @@ public class StoredInformation : MonoBehaviour
         if (timerActive)
         {
             timer += Time.deltaTime;
-            FadeOut.alpha = timer2 / 3;
+            if(FadeOut != null)
+            {
+                FadeOut.alpha = timer2 / 3;
+            }
         }
         else
         {
             timer3 += Time.deltaTime;
-            FadeOut.alpha = timer3 / 3;
+            if(FadeOut != null)
+            {
+                FadeOut.alpha = timer3 / 3;
+            }
         }
         timer2 -= Time.deltaTime;
         if (timer2 <= -9)
@@ -101,13 +107,20 @@ public class StoredInformation : MonoBehaviour
             {
                 DataRecollectionMessage = "Save File Found";
                 UpdateText();
-                PlayerAudio.PlayOneShot(YesSave);
+                if((PlayerAudio) && (YesSave) != null)
+                {
+                    PlayerAudio.PlayOneShot(YesSave);
+                }
+
             }
             else
             {
                 DataRecollectionMessage = "No Save File Found";
                 UpdateText();
-                PlayerAudio.PlayOneShot(NoSave);
+                if((PlayerAudio) && (NoSave) != null)
+                {
+                    PlayerAudio.PlayOneShot(NoSave);
+                }
             }
             timerActive = false;
             timer = 0;
@@ -115,6 +128,9 @@ public class StoredInformation : MonoBehaviour
     }
     void UpdateText()
     {
-        MainText.text = $"{DataRecollectionMessage}".ToString();
+        if(MainText != null)
+        {
+            MainText.text = $"{DataRecollectionMessage}".ToString();
+        }
     }
 }

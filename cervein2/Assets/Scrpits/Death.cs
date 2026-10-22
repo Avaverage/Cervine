@@ -16,8 +16,14 @@ public class Death : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        DeathCanvasGroup.enabled = false;
-        DeathCanvasGroupObject.SetActive(false);
+        if(DeathCanvasGroup != null)
+        {
+            DeathCanvasGroup.enabled = false;
+        }
+        if(DeathCanvasGroupObject != null)
+        {
+            DeathCanvasGroupObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -26,8 +32,14 @@ public class Death : MonoBehaviour
         if(DeathScreenFadeIn)
         {
             FadeInTimer += Time.deltaTime;
-            DeathCanvasGroup.alpha = FadeInTimer / MaxFadeInTimer;
-            DeathCanvasGroupObject.SetActive(true);
+            if(DeathCanvasGroup != null)
+            {
+                DeathCanvasGroup.alpha = FadeInTimer / MaxFadeInTimer;
+            }
+            if(DeathCanvasGroupObject != null)
+            {
+                DeathCanvasGroupObject.SetActive(true);
+            }
             if(FadeInTimer >= 6f)
             {
                 SceneManager.LoadScene(levelToLoad);
@@ -35,17 +47,29 @@ public class Death : MonoBehaviour
             if(FadeInTimer >= 4f)
             {
                 TextFadeOutTimer -= Time.deltaTime;
-                DeathText.alpha = TextFadeOutTimer / MaxTextFadeOutTimer;
+                if(DeathText != null)
+                {
+                    DeathText.alpha = TextFadeOutTimer / MaxTextFadeOutTimer;
+                }
             }
         }
     }
     public void OnDeath()
     {
         DeathScreenFadeIn = true;
-        MainGameplayCanvasGroup.alpha = 0;
-        DeathCanvasGroup.enabled = true;
-        DeathCanvasGroup.alpha = 0;
+        if(MainGameplayCanvasGroup != null)
+        {
+            MainGameplayCanvasGroup.alpha = 0;
+        }
+        if(DeathCanvasGroup != null)
+        {
+            DeathCanvasGroup.enabled = true;
+            DeathCanvasGroup.alpha = 0;
+        }
         StoredInformation.GameStart = false;
-        feedingDeer.TranslateInformation();
+        if (feedingDeer != null) 
+        {
+            feedingDeer.TranslateInformation();
+        }
     }
 }

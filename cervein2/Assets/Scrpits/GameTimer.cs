@@ -23,7 +23,10 @@ public class GameTimer : MonoBehaviour
         //Time depletes indefinitely
         MainTimer -= Time.deltaTime;
         //Adjusting WristWatch FillAmount to match the amount of time left.
-        WristWatch.fillAmount = MainTimer / MaxTimer;
+        if(WristWatch != null)
+        {
+            WristWatch.fillAmount = MainTimer / MaxTimer;
+        }
     }
     public void ResetTimer()
     {

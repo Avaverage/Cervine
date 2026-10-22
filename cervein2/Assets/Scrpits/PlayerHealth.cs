@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
     public Animator HealthBarCanvasGroup;
     public Animator IconAnimator;
     //scripts
-    public Death Death;
+    public Death death;
     public DeerPathfinding deerPathfinding;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,10 +41,15 @@ public class PlayerHealth : MonoBehaviour
         UpdateTextDisplay();
         MinHBBG = playerMaxHealth / playerMaxHealth;
         HBBG = playerMaxHealth / playerMaxHealth;
-        HealthBarCanvasGroup.Play("HealthBarFreeze");
-        IconAnimator.Play("Non-Existent");
+        if(HealthBarCanvasGroup != null)
+        {
+            HealthBarCanvasGroup.Play("HealthBarFreeze");
+        }
+        if(IconAnimator != null)
+        {
+            IconAnimator.Play("Non-Existent");
+        }
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -54,7 +59,10 @@ public class PlayerHealth : MonoBehaviour
         {
 
         }
-        HealthBarBackgroundImage.fillAmount = HBBG;
+        if(HealthBarBackgroundImage != null)
+        {
+            HealthBarBackgroundImage.fillAmount = HBBG;
+        }
         if(lostHealth)
         {
             StartCoroutine(DecreaseValueCoroutine());
@@ -64,19 +72,32 @@ public class PlayerHealth : MonoBehaviour
             if(PlayShake)
             {
                 ShakeTimer += Time.deltaTime;
-                HealthBarCanvasGroup.Play("DamageShakeBar");
+                if(HealthBarCanvasGroup != null)
+                {
+                    HealthBarCanvasGroup.Play("DamageShakeBar");
+                }
             }
             if(ShakeTimer >= 0.1666666f)
             {
-                HealthBarCanvasGroup.Play("HealthBarFreeze");
+                if(HealthBarCanvasGroup != null)
+                {
+                    HealthBarCanvasGroup.Play("HealthBarFreeze");
+                }
                 ShakeTimer = 0;
                 PlayShake = false;
             }
             IconTimer += Time.deltaTime;
-            IconAnimator.Play("TakeOneDamage");
+            if(IconAnimator != null)
+            {
+                IconAnimator.Play("TakeOneDamage");
+            }
+
             if (IconTimer >= 1f)
             {
-                IconAnimator.Play("Non-Existent");
+                if(IconAnimator != null)
+                {
+                    IconAnimator.Play("Non-Existent");
+                }
                 IconTimer = 0;
                 IsHit = false;
             }
@@ -92,7 +113,10 @@ public class PlayerHealth : MonoBehaviour
                 //Take Damage (no shit)
                 playerHealth--;
                 //update HealthBar accordingly
-                HealthBarImage.fillAmount = playerHealth / playerMaxHealth;
+                if(HealthBarImage != null)
+                {
+                    HealthBarImage.fillAmount = playerHealth / playerMaxHealth;
+                }
                 UpdateTextDisplay();
                 MinHBBG = playerHealth / playerMaxHealth;
                 lostHealth = true;
@@ -103,7 +127,10 @@ public class PlayerHealth : MonoBehaviour
                 {
                     isDead = true;
                     playerHealth = 0;
-                    Death.OnDeath();
+                    if(death != null)
+                    {
+                        death.OnDeath();
+                    }
                 }
                 HealthTimer = MaxHealthTimer;
             }
@@ -126,7 +153,10 @@ public class PlayerHealth : MonoBehaviour
     public void UpdateTextDisplay()
     {
         //update health display accordingly
-        HealthDisplay.text = $"Health: {playerHealth}/{playerMaxHealth}".ToString();
+        if(HealthDisplay != null)
+        {
+            HealthDisplay.text = $"Health: {playerHealth}/{playerMaxHealth}".ToString();
+        }
     }
 }
 //Fuck you, Watson
