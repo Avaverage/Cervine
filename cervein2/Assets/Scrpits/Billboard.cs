@@ -9,15 +9,24 @@ public class Billboard : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        CurrentScale = CanvasGroupMakesThingsEasier.localScale;
+        if(CurrentScale != null)
+        {
+            CurrentScale = CanvasGroupMakesThingsEasier.localScale;
+        }
         ScaleX = CanvasGroupMakesThingsEasier.localScale.x * -1f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CurrentScale.x = ScaleX;
-        transform.LookAt(Camera.main.transform.position);
+        if(CurrentScale != null)
+        {
+            CurrentScale.x = ScaleX;
+        }
+        if(transform != null)
+        {
+            transform.LookAt(Camera.main.transform.position);
+        }
         CanvasGroupMakesThingsEasier.localScale = CurrentScale;
     }
 }
