@@ -588,7 +588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1736642668730246712, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.89
+      value: 0.847
       objectReference: {fileID: 0}
     - target: {fileID: 1736642668730246712, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -897,6 +897,14 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: 69a05fb3bf080484f92ad973f6252d6e, type: 2}
+    - target: {fileID: 4735893783968209975, guid: 346b73541addad6448884553c3f78f15, type: 3}
+      propertyPath: m_WalkableMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735893783968209975, guid: 346b73541addad6448884553c3f78f15, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4833567740927518581, guid: 346b73541addad6448884553c3f78f15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 488.9695
