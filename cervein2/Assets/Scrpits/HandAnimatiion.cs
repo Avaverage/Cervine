@@ -5,7 +5,7 @@ public class HandAnimatiion : MonoBehaviour
 {
     [SerializeField] private InputActionReference gripActionRefrerence;
     [SerializeField] private InputActionReference triggerActionRefrerence;
-    private Animator animator;
+    public Animator animator;
     private string gripActionName = "Grip";
     private string triggerActionName = "Pinch";
     private void Awake()
@@ -19,10 +19,6 @@ public class HandAnimatiion : MonoBehaviour
             Debug.LogError("Animator component not found on the GameObject.");
         }
     }
-
-
-
-
     void Update()
     {
         if (animator == null)
