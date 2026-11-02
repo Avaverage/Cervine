@@ -42,6 +42,8 @@ public class MainMenu : MonoBehaviour
     {
         MMSelected = true;
         Controls.enabled = false;
+        OptionsControlsActive = false;
+        OptionsControlsAC.Play("ControlsClose");
     }
 
     // Update is called once per frame
@@ -52,6 +54,7 @@ public class MainMenu : MonoBehaviour
         {
             FadeIn.alpha = FadeInTimer / 3;
         }
+        //MainMenu Selected
         if(MMSelected)
         {
             OptionsSelected = false;
@@ -61,6 +64,7 @@ public class MainMenu : MonoBehaviour
         {
             TestTimerActive = false;
         }
+        //PlaySelected
         if(PlayGameSelected || PlayTutorialSelected)
         {
             PlayGameTimer += Time.deltaTime;
@@ -166,7 +170,7 @@ public class MainMenu : MonoBehaviour
             {
                 OptionsControlsAC.Play("ControlsMovingClose");
             }
-            if(OptionsControlsInactive & OptionsTimer >= 0.05f)
+            if(OptionsControlsInactive & OptionsTimer >= 0.5f)
             {
                 if (OptionsControlsAC != null)
                 {

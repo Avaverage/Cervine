@@ -23,6 +23,7 @@ public class ScoreCanvas : MonoBehaviour
     public CanvasGroup FadeOut;
     public StoredInformation storedInformation;
     public string LevelToLoad;
+    public string MainMenuToLoad;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
