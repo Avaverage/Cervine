@@ -17,10 +17,7 @@ public class DeerPathfinding : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(DeerAgent != null)
-        {
-            DeerAgent = GetComponent<NavMeshAgent>();
-        }
+        DeerAgent = GetComponent<NavMeshAgent>();
         if(homeTarget != null)
         {
             homeTarget.position = self.position;
