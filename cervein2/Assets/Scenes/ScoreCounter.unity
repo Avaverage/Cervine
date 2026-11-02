@@ -3481,7 +3481,7 @@ MonoBehaviour:
   FadeOut: {fileID: 1606043092}
   storedInformation: {fileID: 1122131408}
   LevelToLoad: MainMenu
-  MainMenuToLoad: 
+  MainMenuToLoad: MainMenu
 --- !u!114 &1798996599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3494,7 +3494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f07998931669014a8acb2b5bb814410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  LevelToLoad: SampleScene
+  LevelToLoad: Tutorial
   OtherLevelToLoad: 
   PlayGameSelected: 0
   OptionsSelected: 0
