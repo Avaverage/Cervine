@@ -9,6 +9,8 @@ public class GameTimer : MonoBehaviour
     public float NewMaxTimer;
     public float ResetMaxTimer;
     public Image WristWatch;
+    //outside scripts that are pretty important for the game's function
+    public FeedingDeer feedingDeer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,13 +22,17 @@ public class GameTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Time depletes indefinitely
-        MainTimer -= Time.deltaTime;
-        //Adjusting WristWatch FillAmount to match the amount of time left.
-        if(WristWatch != null)
+        if(feedingDeer.IsGameplayLoopStarted)
         {
-            WristWatch.fillAmount = MainTimer / MaxTimer;
+            //Time depletes indefinitely
+            MainTimer -= Time.deltaTime;
+            //Adjusting WristWatch FillAmount to match the amount of time left.
+            if(WristWatch != null)
+            {
+                WristWatch.fillAmount = MainTimer / MaxTimer;
+            }
         }
+
     }
     public void ResetTimer()
     {

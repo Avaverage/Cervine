@@ -25,8 +25,11 @@ public class NavMeshLootSpawner : MonoBehaviour
     public float deerCrackerAmountAllowed;
     //DeclaredBooleans
     bool LimitCrackers = false;
+    bool GLSUsed = false;
     //DeclaredMiscelanious
     public SpawnShape spawnShape = SpawnShape.Circle;
+    //Declared Scripts
+    public FeedingDeer feedingDeer;
     public void SpawnLoot()
     {
         //forloop ensures that it repeats the process however many times necessary
@@ -106,31 +109,39 @@ public class NavMeshLootSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SpawnLootTimer += Time.deltaTime;
-        //if the timer reaches its goal
-        if(SpawnLootTimer >= MaxSpawnLootTimer)
+        if(feedingDeer.IsGameplayLoopStarted)
         {
-            //Call the function that spawns our items for testing, I recommend some 5-10 seconds, or just to test the called function on Start to see how they spawn.
-            SpawnLoot();
-            //reset the damn timer (I forgot first test and it almost killed the computer)
-            SpawnLootTimer = 0f;
-        }
-        //Basic Limiting system (It doesn't automatically track exact amounts of deer crackers, but should roughly keep the total number under 60 or so)
-        if(deerCrackerTotalCount >= deerCrackerAmountAllowed)
-        {
-            LimitCrackers = true;
-        }
-        else
-        {
-            LimitCrackers = false;
-        }
-        if(LimitCrackers)
-        {
-            SpawnCount = 0;
-        }
-        else if(!LimitCrackers)
-        {
-            SpawnCount = UsualSpawnCount;
+            if(!GLSUsed)
+            {
+                SpawnLoot();
+                GLSUsed = false;
+            }
+            SpawnLootTimer += Time.deltaTime;
+            //if the timer reaches its goal
+            if(SpawnLootTimer >= MaxSpawnLootTimer)
+            {
+                //Call the function that spawns our items for testing, I recommend some 5-10 seconds, or just to test the called function on Start to see how they spawn.
+                SpawnLoot();
+                //reset the damn timer (I forgot first test and it almost killed the computer)
+                SpawnLootTimer = 0f;
+            }
+            //Basic Limiting system (It doesn't automatically track exact amounts of deer crackers, but should roughly keep the total number under 60 or so)
+            if(deerCrackerTotalCount >= deerCrackerAmountAllowed)
+            {
+                LimitCrackers = true;
+            }
+            else
+            {
+                LimitCrackers = false;
+            }
+            if(LimitCrackers)
+            {
+                SpawnCount = 0;
+            }
+            else if(!LimitCrackers)
+            {
+                SpawnCount = UsualSpawnCount;
+            }
         }
     }
 }
