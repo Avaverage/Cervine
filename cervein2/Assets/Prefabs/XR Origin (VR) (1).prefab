@@ -1794,6 +1794,7 @@ GameObject:
   - component: {fileID: 5673864912862160832}
   - component: {fileID: 7231375229109450620}
   - component: {fileID: 6618455025938054293}
+  - component: {fileID: 4189490362426330796}
   m_Layer: 11
   m_Name: XR Origin (VR) (1)
   m_TagString: Player
@@ -2048,6 +2049,24 @@ MonoBehaviour:
   TextFadeOutTimer: 3
   MaxTextFadeOutTimer: 0
   feedingDeer: {fileID: 0}
+--- !u!114 &4189490362426330796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6420004929803959699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a13a4793e7069b48aa5bc094b3ade25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManagment
+  PlayerAudio: {fileID: 7231375229109450620}
+  MMMusic: {fileID: 8300000, guid: 8ba4d77814bae014486c8c188d5ec6f6, type: 3}
+  IsMainMenu: 1
+  IsLevel: 0
+  Timer: 0
+  MaxMMMusicTime: 208
 --- !u!1 &7056523320304200066
 GameObject:
   m_ObjectHideFlags: 0

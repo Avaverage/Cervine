@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class AudioMixing : MonoBehaviour
 {
     [SerializeField] public AudioMixer MainMixer;
-    [SerializeField] public static string volumeParameterName1 = "Music Volume";
-    [SerializeField] public static string volumeParameterName2 = "SFX Volume";
+    [SerializeField] public const string volumeParameterName1 = "Music Volume";
+    [SerializeField] public const string volumeParameterName2 = "SFX Volume";
     [SerializeField] public Slider MusicSlider;
     [SerializeField] public Slider SFXSlider;
     public float MVDBV;
@@ -51,10 +51,7 @@ public class AudioMixing : MonoBehaviour
         if(MusicSlider != null)
         {
             MVDBV = Mathf.Log10(MusicSliderValue) * 20;
-            if(MainMixer != null)
-            {
-                MainMixer.SetFloat(volumeParameterName1, MVDBV);
-            }
+            MainMixer.SetFloat(volumeParameterName1, MVDBV);
             StoredInformation.MusicVolumeStatic = MVDBV;
         }
     }
@@ -64,10 +61,7 @@ public class AudioMixing : MonoBehaviour
         if(MusicSlider != null)
         {
             SFXDBV = Mathf.Log10(SFXSliderValue) * 20;
-            if(MainMixer != null)
-            {
-                MainMixer.SetFloat(volumeParameterName1, SFXDBV);
-            }
+            MainMixer.SetFloat(volumeParameterName2, SFXDBV);
             StoredInformation.SFXVolumeStatic = SFXDBV;
         }
     }
