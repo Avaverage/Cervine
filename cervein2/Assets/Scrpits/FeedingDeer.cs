@@ -26,6 +26,7 @@ public class FeedingDeer : MonoBehaviour
     public NavMeshLootSpawner navMeshLootSpawner;
     public MainMenu mainMenuScript;
     public GameTimer gameTimer;
+    public AudioManagment audioManagement;
     //UI
     public TextMeshProUGUI scoreDisplay;
     public TextMeshProUGUI QuotaDisplay;
@@ -101,6 +102,8 @@ public class FeedingDeer : MonoBehaviour
                 QuotaBar.enabled = true;
                 QuotaBarBackground.enabled = true;
                 DeerCrackersText.enabled = true;
+                audioManagement.IsSecondPhase = true;
+                audioManagement.Timer = 0f;
                 startGameplayLoopTimer = 0f;
                 StartGameQuota = 0;
             }

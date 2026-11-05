@@ -1938,7 +1938,7 @@ AudioSource:
   m_GameObject: {fileID: 6420004929803959699}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 2148859306497714299, guid: 8cdfe29c242fc284eaac863c4af1f2a0, type: 2}
+  OutputAudioMixerGroup: {fileID: -7646139726770586056, guid: de382a0b4452ae34fbbb993b51fbafaf, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -2063,10 +2063,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManagment
   PlayerAudio: {fileID: 7231375229109450620}
   MMMusic: {fileID: 8300000, guid: 8ba4d77814bae014486c8c188d5ec6f6, type: 3}
+  LevelMusic: {fileID: 0}
+  ChaosMusic: {fileID: 0}
+  TensionChord: {fileID: 0}
   IsMainMenu: 1
   IsLevel: 0
+  IsSecondPhase: 0
+  OutOfDeerCrackers: 0
+  playTensionChord: 0
   Timer: 0
-  MaxMMMusicTime: 208
+  MaxVolumeTimer: 0
+  MaxMMMusicTime: 207
+  MaxChaosMusicTime: 0
+  MaxLevelMusicTime: 0
 --- !u!1 &7056523320304200066
 GameObject:
   m_ObjectHideFlags: 0

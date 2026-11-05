@@ -341,7 +341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &112131146
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6351,6 +6351,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: MaxMMMusicTime
+      value: 138.33333
+      objectReference: {fileID: 0}
     - target: {fileID: 6420004929803959699, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_Name
       value: XR Origin (VR) (1)
@@ -6376,9 +6380,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7231375229109450620, guid: b89239542ff541446bd49777033c688e, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -7646139726770586056, guid: de382a0b4452ae34fbbb993b51fbafaf, type: 2}
+      propertyPath: m_Pitch
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231375229109450620, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7986708319646701296, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_AttachTransform
       value: 
