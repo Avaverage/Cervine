@@ -6357,7 +6357,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 1907fb7235dd95742badcc06869accec, type: 3}
     - target: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: MaxMMMusicTime
-      value: 138.33333
+      value: 138.66667
       objectReference: {fileID: 0}
     - target: {fileID: 6420004929803959699, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_Name

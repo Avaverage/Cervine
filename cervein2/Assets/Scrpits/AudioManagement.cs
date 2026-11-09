@@ -43,6 +43,14 @@ public class AudioManagment : MonoBehaviour
         if(IsLevel)
         {
             Timer += Time.deltaTime;
+            if(Timer == 0f)
+            {
+                PlayerAudio.PlayOneShot(LevelMusic);
+            }
+            if(Timer >= 52.364f)
+            {
+                Timer = 0;
+            }
             if(OutOfDeerCrackers)
             {
                 VolumeTimer -= Time.deltaTime;
