@@ -487,6 +487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94dd22cb6ee9fe545831cf5000ebac3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  CanvasGroupMakesThingsEasier: {fileID: 0}
+  CurrentScale: {x: 0, y: 0, z: 0}
+  ScaleX: 0
 --- !u!114 &252628386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1175,6 +1178,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1736642668730246712, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: IsMainMenu
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6420004929803959699, guid: b89239542ff541446bd49777033c688e, type: 3}
