@@ -26,6 +26,10 @@ public class AudioManagment : MonoBehaviour
             PlayerAudio.PlayOneShot(MMMusic);
         }
         VolumeTimer = MaxVolumeTimer;
+        if(IsLevel)
+        {
+            PlayerAudio.PlayOneShot(LevelMusic);
+        }
     }
 
     // Update is called once per frame
