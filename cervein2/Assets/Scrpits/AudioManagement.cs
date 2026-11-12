@@ -51,7 +51,7 @@ public class AudioManagment : MonoBehaviour
             {
                 PlayerAudio.PlayOneShot(LevelMusic);
             }
-            if(Timer >= 52.364f)
+            if(Timer >= MaxLevelMusicTime)
             {
                 Timer = 0;
             }
