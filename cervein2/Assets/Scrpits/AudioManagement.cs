@@ -3,6 +3,7 @@ using UnityEngine;
 public class AudioManagment : MonoBehaviour
 {
     public AudioSource PlayerAudio;
+    public AudioSource PlayerAudio2;
     public AudioClip MMMusic;
     public AudioClip LevelMusic;
     public AudioClip ChaosMusic;
@@ -13,7 +14,7 @@ public class AudioManagment : MonoBehaviour
     public bool OutOfDeerCrackers;
     public bool playTensionChord;
     public float Timer;
-    float VolumeTimer;
+    public float VolumeTimer;
     public float MaxVolumeTimer;
     public float MaxMMMusicTime;
     public float MaxChaosMusicTime;
@@ -30,6 +31,7 @@ public class AudioManagment : MonoBehaviour
         {
             PlayerAudio.PlayOneShot(LevelMusic);
         }
+        PlayerAudio2.enabled = false;
     }
 
     // Update is called once per frame
@@ -59,7 +61,7 @@ public class AudioManagment : MonoBehaviour
             {
                 VolumeTimer -= Time.deltaTime;
                 PlayerAudio.volume = VolumeTimer / MaxVolumeTimer;
-                if(OutOfDeerCrackers && VolumeTimer >= 0)
+                if(OutOfDeerCrackers && VolumeTimer <= 0)
                 {
                     PlayerAudio.Stop();
                     PlayerAudio.volume = 1;
@@ -93,5 +95,9 @@ public class AudioManagment : MonoBehaviour
                 }
             }
         }
+    }
+    public void ChaosMusicStarted()
+    {
+        PlayerAudio2.enabled = true;
     }
 }

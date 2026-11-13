@@ -93,6 +93,7 @@ public class FeedingDeer : MonoBehaviour
         }
         if(StartGameQuota >= MaxStartGameQuota)
         {
+            audioManagement.OutOfDeerCrackers = true;
             startGameplayLoopTimer += Time.deltaTime;
             if(startGameplayLoopTimer >= maxStartGameplayLoopTimer)
             {
