@@ -1,18 +1,26 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManagment : MonoBehaviour
 {
     public AudioSource PlayerAudio;
     public AudioSource PlayerAudio2;
+    public AudioSource PlayerAudio3;
     public AudioClip MMMusic;
     public AudioClip LevelMusic;
     public AudioClip ChaosMusic;
     public AudioClip TensionChord;
+    public AudioClip ButtonPress;
+    public Image EYEBROWS;
+    public CanvasGroup EYEBROWSCanvasGroup;
+
     public bool IsMainMenu;
     public bool IsLevel;
     public bool IsSecondPhase;
     public bool OutOfDeerCrackers;
     public bool playTensionChord;
+    public float TimerTolerance = 0.01f;
     public float Timer;
     public float VolumeTimer;
     public float MaxVolumeTimer;
@@ -22,6 +30,7 @@ public class AudioManagment : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        EYEBROWS.enabled = false;
         if(IsMainMenu)
         {
             PlayerAudio.PlayOneShot(MMMusic);
@@ -61,15 +70,21 @@ public class AudioManagment : MonoBehaviour
             {
                 VolumeTimer -= Time.deltaTime;
                 PlayerAudio.volume = VolumeTimer / MaxVolumeTimer;
-                if(OutOfDeerCrackers && VolumeTimer <= 0)
+                if(OutOfDeerCrackers && VolumeTimer <= -3f)
                 {
                     PlayerAudio.Stop();
                     PlayerAudio.volume = 1;
                     OutOfDeerCrackers = false;
                 }
-                if(VolumeTimer >= -2f)
+                if(Mathf.Abs(VolumeTimer - -2f) <= TimerTolerance)
                 {
-                    PlayerAudio.PlayOneShot(TensionChord);
+                    PlayerAudio3.PlayOneShot(TensionChord);
+                    EYEBROWS.enabled = true;
+                    StartCoroutine(FadeOutEyebrows());
+                }
+                if(VolumeTimer <= -2f)
+                {
+
                 }
             }
             if(IsSecondPhase)
@@ -96,8 +111,20 @@ public class AudioManagment : MonoBehaviour
             }
         }
     }
+    public IEnumerator FadeOutEyebrows()
+    {
+        while(VolumeTimer > -3)
+        {
+            EYEBROWSCanvasGroup.alpha -= 0.016666f;
+            yield return null;
+        }
+    }
     public void ChaosMusicStarted()
     {
         PlayerAudio2.enabled = true;
+    }
+    public void ButtonPressSFX()
+    {
+        PlayerAudio3.PlayOneShot(ButtonPress);
     }
 }

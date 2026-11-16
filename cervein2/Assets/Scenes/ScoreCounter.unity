@@ -445,6 +445,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2023112128}
+        m_TargetAssemblyTypeName: AudioManagment, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &296060285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,6 +833,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1798996599}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: MMPlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2023112128}
+        m_TargetAssemblyTypeName: AudioManagment, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2634,6 +2658,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2023112128}
+        m_TargetAssemblyTypeName: AudioManagment, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1587447013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3616,6 +3652,18 @@ PrefabInstance:
       propertyPath: LevelMusic
       value: 
       objectReference: {fileID: 8300000, guid: 231c455670e37f947921e724e483046c, type: 3}
+    - target: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: ButtonPress
+      value: 
+      objectReference: {fileID: 8300000, guid: 16880a1b99e0b774d851b1f00807179c, type: 3}
+    - target: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: PlayerAudio2
+      value: 
+      objectReference: {fileID: 2023112130}
+    - target: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: PlayerAudio3
+      value: 
+      objectReference: {fileID: 2023112129}
     - target: {fileID: 6420004929803959699, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_Name
       value: XR Origin (VR) (1)
@@ -3625,6 +3673,27 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b89239542ff541446bd49777033c688e, type: 3}
+--- !u!114 &2023112128 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
+  m_PrefabInstance: {fileID: 2023112127}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a13a4793e7069b48aa5bc094b3ade25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManagment
+--- !u!82 &2023112129 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2049964913389051832, guid: b89239542ff541446bd49777033c688e, type: 3}
+  m_PrefabInstance: {fileID: 2023112127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2023112130 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2608591421398980040, guid: b89239542ff541446bd49777033c688e, type: 3}
+  m_PrefabInstance: {fileID: 2023112127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1157394282173009685
 Transform:
   m_ObjectHideFlags: 0

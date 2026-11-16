@@ -886,6 +886,94 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7683446420479109090}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2875217692196267098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6047602220495608269}
+  - component: {fileID: 2228349048548813844}
+  - component: {fileID: 8804597184121542535}
+  - component: {fileID: 473473932201260674}
+  m_Layer: 5
+  m_Name: EYEBROWS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6047602220495608269
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875217692196267098}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.243}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1327148174216815437}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.663}
+  m_SizeDelta: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2228349048548813844
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875217692196267098}
+  m_CullTransparentMesh: 1
+--- !u!114 &8804597184121542535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875217692196267098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ee11137f44d74b84d80ee69613cd9c93, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!225 &473473932201260674
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875217692196267098}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2955937323844115848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,18 +1993,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FeedingDeer
   DeerCrackerQuota: 0
   MaxDeerCrackerQuota: 3
+  StartGameQuota: 0
+  MaxStartGameQuota: 0
+  startGameplayLoopTimer: 0
+  maxStartGameplayLoopTimer: 0
   pointScore: 0
   pointScoreMarginalIncrease: 100
   IsStartMenuDeer: 0
+  IsGameplayLoopStarted: 0
   ChompChompSFX: {fileID: 0}
   DeerAudioSource: {fileID: 1747974919822789413}
   deerPathFinding: {fileID: 1194894808730820391}
   navMeshLootSpawner: {fileID: 0}
   mainMenuScript: {fileID: 0}
-  scoreDisplay: {fileID: 0}
   gameTimer: {fileID: 0}
+  audioManagement: {fileID: 0}
+  scoreDisplay: {fileID: 0}
   QuotaDisplay: {fileID: 5909298522183685456}
   QuotaBar: {fileID: 4567824754669702460}
+  QuotaBarBackground: {fileID: 0}
+  DeerCrackersText: {fileID: 0}
 --- !u!82 &1747974919822789413
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2638,6 +2734,7 @@ RectTransform:
   - {fileID: 3355172555925759356}
   - {fileID: 7913903794365451833}
   - {fileID: 1998648814918231487}
+  - {fileID: 6047602220495608269}
   m_Father: {fileID: 7684655001950527157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

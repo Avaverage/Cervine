@@ -560,6 +560,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2023112129}
+        m_TargetAssemblyTypeName: AudioManagment, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &273154279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,6 +1009,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2082675152}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: MMOptions
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2023112129}
+        m_TargetAssemblyTypeName: AudioManagment, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3702,6 +3726,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2023112129}
+        m_TargetAssemblyTypeName: AudioManagment, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1151917554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4511,7 +4547,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2023112129}
+        m_TargetAssemblyTypeName: AudioManagment, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1522013728
 GameObject:
   m_ObjectHideFlags: 0
@@ -5349,6 +5397,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2023112129}
+        m_TargetAssemblyTypeName: AudioManagment, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1710170234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5741,6 +5801,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2023112129}
+        m_TargetAssemblyTypeName: AudioManagment, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1776892936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5869,7 +5941,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2023112129}
+        m_TargetAssemblyTypeName: AudioManagment, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1900109782
 GameObject:
   m_ObjectHideFlags: 0
@@ -6356,6 +6440,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 1907fb7235dd95742badcc06869accec, type: 3}
     - target: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: ButtonPress
+      value: 
+      objectReference: {fileID: 8300000, guid: 16880a1b99e0b774d851b1f00807179c, type: 3}
+    - target: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: PlayerAudio2
+      value: 
+      objectReference: {fileID: 2023112131}
+    - target: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: PlayerAudio3
+      value: 
+      objectReference: {fileID: 2023112130}
+    - target: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: MaxMMMusicTime
       value: 138.66667
       objectReference: {fileID: 0}
@@ -6413,6 +6509,27 @@ PrefabInstance:
 --- !u!82 &2023112128 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7231375229109450620, guid: b89239542ff541446bd49777033c688e, type: 3}
+  m_PrefabInstance: {fileID: 2023112127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2023112129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
+  m_PrefabInstance: {fileID: 2023112127}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a13a4793e7069b48aa5bc094b3ade25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManagment
+--- !u!82 &2023112130 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2049964913389051832, guid: b89239542ff541446bd49777033c688e, type: 3}
+  m_PrefabInstance: {fileID: 2023112127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2023112131 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2608591421398980040, guid: b89239542ff541446bd49777033c688e, type: 3}
   m_PrefabInstance: {fileID: 2023112127}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2038183320 stripped
