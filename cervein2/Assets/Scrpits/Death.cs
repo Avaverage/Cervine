@@ -13,6 +13,7 @@ public class Death : MonoBehaviour
     public float TextFadeOutTimer;
     public float MaxTextFadeOutTimer;
     public FeedingDeer feedingDeer;
+    public AudioManagment AudioManagement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -71,5 +72,6 @@ public class Death : MonoBehaviour
         {
             feedingDeer.TranslateInformation();
         }
+        AudioManagement.PlayerAudio.volume = 1;
     }
 }

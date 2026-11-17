@@ -33,6 +33,7 @@ public class FeedingDeer : MonoBehaviour
     public Image QuotaBar;
     public Image QuotaBarBackground;
     public TextMeshProUGUI DeerCrackersText;
+    public ParticleSystem CrackerParticles;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -149,6 +150,10 @@ public class FeedingDeer : MonoBehaviour
                 {
                     DeerAudioSource.PlayOneShot(ChompChompSFX);
                 }
+            }
+            if(CrackerParticles != null)
+            {
+                CrackerParticles.Play();
             }
             //destroy DeerCracker
             Destroy(Collision.gameObject);

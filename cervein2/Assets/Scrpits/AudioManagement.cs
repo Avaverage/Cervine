@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AudioManagment : MonoBehaviour
 {
@@ -20,29 +21,46 @@ public class AudioManagment : MonoBehaviour
     public bool IsSecondPhase;
     public bool OutOfDeerCrackers;
     public bool playTensionChord;
-    public float TimerTolerance = 0.01f;
+    public bool NecessaryTimerBoolean = true;
+    public float TimerTolerance = 0.015f;
     public float Timer;
     public float VolumeTimer;
     public float MaxVolumeTimer;
     public float MaxMMMusicTime;
     public float MaxChaosMusicTime;
     public float MaxLevelMusicTime;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         EYEBROWS.enabled = false;
-        if(IsMainMenu)
-        {
-            PlayerAudio.PlayOneShot(MMMusic);
-        }
+        //if (IsMainMenu)
+        //{
+            //PlayerAudio.PlayOneShot(MMMusic);
+        //}
         VolumeTimer = MaxVolumeTimer;
-        if(IsLevel)
-        {
-            PlayerAudio.PlayOneShot(LevelMusic);
-        }
+        //if (IsLevel)
+        //{
+            //PlayerAudio.PlayOneShot(LevelMusic);
+        //}
         PlayerAudio2.enabled = false;
     }
+    //public void StartSoundTrack()
+    //{
 
+    //}
+    //void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    //{
+        //StartSoundTrack();
+    //}
+    //void OnEnable()
+    //{
+       // SceneManager.sceneLoaded += OnSceneLoaded;
+    //}
+    //void OnDisable()
+    //{
+        //SceneManager.sceneLoaded -= OnSceneLoaded;
+    //}
     // Update is called once per frame
     void Update()
     {
@@ -51,7 +69,7 @@ public class AudioManagment : MonoBehaviour
             Timer += Time.deltaTime;
             if(Timer >= MaxMMMusicTime)
             {
-                PlayerAudio.PlayOneShot(MMMusic);
+                //PlayerAudio.PlayOneShot(MMMusic);
                 Timer = 0;
             }
         }
@@ -60,7 +78,7 @@ public class AudioManagment : MonoBehaviour
             Timer += Time.deltaTime;
             if(Timer == 0f)
             {
-                PlayerAudio.PlayOneShot(LevelMusic);
+                //PlayerAudio.PlayOneShot(LevelMusic);
             }
             if(Timer >= MaxLevelMusicTime)
             {
@@ -76,26 +94,31 @@ public class AudioManagment : MonoBehaviour
                     PlayerAudio.volume = 1;
                     OutOfDeerCrackers = false;
                 }
-                if(Mathf.Abs(VolumeTimer - -2f) <= TimerTolerance)
+                if(VolumeTimer <= -2 && NecessaryTimerBoolean)
                 {
                     PlayerAudio3.PlayOneShot(TensionChord);
                     EYEBROWS.enabled = true;
                     StartCoroutine(FadeOutEyebrows());
+                    NecessaryTimerBoolean = false;
                 }
-                if(VolumeTimer <= -2f)
+                if(VolumeTimer <= -3f)
                 {
-
+                    EYEBROWSCanvasGroup.alpha = 0;
+                }
+                if(VolumeTimer <= -5f)
+                {
+                    PlayerAudio2.enabled = true;
                 }
             }
             if(IsSecondPhase)
             {
                 if(Timer == 0)
                 {
-                    PlayerAudio.PlayOneShot(ChaosMusic);
+                    //PlayerAudio.PlayOneShot(ChaosMusic);
                 }
                 if(Timer >= MaxChaosMusicTime)
                 {
-                    Timer = 0;
+                    //Timer = 0;
                 }
             }
             else
