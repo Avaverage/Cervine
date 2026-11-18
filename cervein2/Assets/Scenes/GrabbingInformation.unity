@@ -1188,6 +1188,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin (VR) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7004223989952177349, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 40e2448c062f59b4db93513050fb169e, type: 3}
+    - target: {fileID: 9027525119340469243, guid: b89239542ff541446bd49777033c688e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.33
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -151,12 +151,14 @@ public class MainMenu : MonoBehaviour
             if(OptionsControlsAC != null)
             {
                 OptionsControlsAC.Play("ControlsMovingOpen");
+                MMOptionsAC.Play("MMOptionsMoveLeft");
             }
             if (OptionsControlsActive && OptionsTimer >= 0.5f)
             {
                 if(OptionsControlsAC != null)
                 {
                     OptionsControlsAC.Play("ControlsOpen");
+                    MMOptionsAC.Play("MMOptionsStayLeft");
                 } 
                 OptionsControlsActive = false;
                 OptionsTimer = 0;
@@ -169,12 +171,14 @@ public class MainMenu : MonoBehaviour
             if (OptionsControlsAC != null)
             {
                 OptionsControlsAC.Play("ControlsMovingClose");
+                MMOptionsAC.Play("MMOptionsMoveCenter");
             }
             if(OptionsControlsInactive & OptionsTimer >= 0.5f)
             {
                 if (OptionsControlsAC != null)
                 {
                     OptionsControlsAC.Play("ControlsClose");
+                    MMOptionsAC.Play("MMOptionsStayCenter");
                 }
                 if(Controls != null)
                 {

@@ -8045,7 +8045,7 @@ PrefabInstance:
     - target: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: LevelMusic
       value: 
-      objectReference: {fileID: 8300000, guid: 8c898180e49fbde459a97b97aa4a2521, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4189490362426330796, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: PlayerAudio2
       value: 
@@ -8149,7 +8149,7 @@ PrefabInstance:
     - target: {fileID: 7231375229109450620, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 8c898180e49fbde459a97b97aa4a2521, type: 3}
+      objectReference: {fileID: 8300000, guid: 5c6f64ed2c089c84ea64260c108facbb, type: 3}
     - target: {fileID: 9027525119340469243, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.33
@@ -23482,6 +23482,10 @@ PrefabInstance:
     - target: {fileID: 7051360550581475687, guid: 346b73541addad6448884553c3f78f15, type: 3}
       propertyPath: maxStartGameplayLoopTimer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143016690917345426, guid: 346b73541addad6448884553c3f78f15, type: 3}
+      propertyPath: m_MaxParticleSize
+      value: 0.07
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
