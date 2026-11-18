@@ -23469,7 +23469,7 @@ PrefabInstance:
       objectReference: {fileID: 287045258}
     - target: {fileID: 7051360550581475687, guid: 346b73541addad6448884553c3f78f15, type: 3}
       propertyPath: MaxStartGameQuota
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7051360550581475687, guid: 346b73541addad6448884553c3f78f15, type: 3}
       propertyPath: QuotaBarBackground
