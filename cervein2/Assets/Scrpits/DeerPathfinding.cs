@@ -14,11 +14,16 @@ public class DeerPathfinding : MonoBehaviour
     public GameObject DeerAttackRange;
     public Transform homeTarget;
     public Transform self;
+    public float stopRadius;
+    public float distance;
+    public float maxTriggerDistance;
+    public Animator DeerAC;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         DeerAgent = GetComponent<NavMeshAgent>();
         homeTarget.position = self.position;
+        DeerAgent.stoppingDistance = stopRadius;
     }
     // Update is called once per frame
     void Update()
@@ -34,6 +39,14 @@ public class DeerPathfinding : MonoBehaviour
             {
                 DeerAttackRange.SetActive(true);
             }
+            if(distance <= maxTriggerDistance)
+            {
+                DeerAC.Play("headbuttpls");
+            }
+            else
+            {
+                DeerAC.Play("Walking");
+            }
         }
         else
         {
@@ -46,6 +59,8 @@ public class DeerPathfinding : MonoBehaviour
                 DeerAgent.SetDestination(homeTarget.position);
             }
         }
+        distance = Vector3.Distance(transform.position, Player.position);
+
     }
 }
 //I am so very lost. I merely need to find the player, who owes me a lot of [deer crackers]. BITCH, I WANT MY [deer crackers]!

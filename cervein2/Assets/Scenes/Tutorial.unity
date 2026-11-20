@@ -7972,7 +7972,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 82769278337609814, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: MaxTimer
-      value: 120
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 82769278337609814, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: feedingDeer
@@ -8021,7 +8021,7 @@ PrefabInstance:
     - target: {fileID: 2608591421398980040, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 1907fb7235dd95742badcc06869accec, type: 3}
+      objectReference: {fileID: 8300000, guid: 26ac9b68015e6d9448bf03a67b0de5ba, type: 3}
     - target: {fileID: 2608591421398980040, guid: b89239542ff541446bd49777033c688e, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1
@@ -18427,6 +18427,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 928cf2bf9f3ab464194afcbd3e45ac3b, type: 3}
   m_PrefabInstance: {fileID: 1291879631}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1294493183
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1651333974}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.6815476
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.681547
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.6815476
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.11666262
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5199997
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.008993059
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9992687
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.03823632
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -81.703
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+      propertyPath: m_Name
+      value: DEER FOR GAME
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+--- !u!4 &1294493184 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+  m_PrefabInstance: {fileID: 1294493183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1294493185 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 7ca7fb2a434308b4bb2f709b1449b799, type: 3}
+  m_PrefabInstance: {fileID: 1294493183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1297049868 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dee178db278380d4f858962fe86cd481, type: 3}
@@ -23400,6 +23479,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1194894808730820391, guid: 346b73541addad6448884553c3f78f15, type: 3}
+      propertyPath: DeerAC
+      value: 
+      objectReference: {fileID: 1294493185}
+    - target: {fileID: 1194894808730820391, guid: 346b73541addad6448884553c3f78f15, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 1671459210}
@@ -23407,6 +23490,14 @@ PrefabInstance:
       propertyPath: homeTarget
       value: 
       objectReference: {fileID: 883355389}
+    - target: {fileID: 1194894808730820391, guid: 346b73541addad6448884553c3f78f15, type: 3}
+      propertyPath: stopRadius
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747974919822789413, guid: 346b73541addad6448884553c3f78f15, type: 3}
+      propertyPath: MinDistance
+      value: 1.674469
+      objectReference: {fileID: 0}
     - target: {fileID: 1747974919822789413, guid: 346b73541addad6448884553c3f78f15, type: 3}
       propertyPath: DopplerLevel
       value: 0
@@ -23507,6 +23598,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.735
       objectReference: {fileID: 0}
+    - target: {fileID: 6386649911608285743, guid: 346b73541addad6448884553c3f78f15, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7051360550581475687, guid: 346b73541addad6448884553c3f78f15, type: 3}
       propertyPath: gameTimer
       value: 
@@ -23533,7 +23628,7 @@ PrefabInstance:
       objectReference: {fileID: 287045258}
     - target: {fileID: 7051360550581475687, guid: 346b73541addad6448884553c3f78f15, type: 3}
       propertyPath: MaxStartGameQuota
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7051360550581475687, guid: 346b73541addad6448884553c3f78f15, type: 3}
       propertyPath: QuotaBarBackground
@@ -23552,8 +23647,12 @@ PrefabInstance:
       value: 0.07
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 615006834085588238, guid: 346b73541addad6448884553c3f78f15, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4833567740927518581, guid: 346b73541addad6448884553c3f78f15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1294493184}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 346b73541addad6448884553c3f78f15, type: 3}
 --- !u!114 &1651333970 stripped
@@ -23589,6 +23688,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911fcac2219119e44962c326b4e6f9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeerPathfinding
+--- !u!4 &1651333974 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4833567740927518581, guid: 346b73541addad6448884553c3f78f15, type: 3}
+  m_PrefabInstance: {fileID: 1651333969}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1656379249
 PrefabInstance:
   m_ObjectHideFlags: 0
